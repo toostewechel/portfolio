@@ -1,9 +1,10 @@
 import Header from "./Header";
 
 const layoutStyle = {
-  margin: 64,
-  padding: 20,
-  border: "1px solid #DDD"
+  marginRight: "auto",
+  marginLeft: "auto",
+  maxWidth: "932px",
+  padding: "16px"
 };
 
 const Layout = props => (
