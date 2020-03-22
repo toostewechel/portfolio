@@ -18,6 +18,18 @@ export default function Index() {
           deze naar duurzame en gebruiksvriendelijke oplossingen.
         </p>
       </div>
+      <h2 className="font-display text-3xl font-medium mt-8">Projecten</h2>
+      <ArticleCard
+        datePublished="20 jan 2020"
+        duration="13 min"
+        backgroundImage="url(/images/featured-article-online-behandelprogrammas.png)"
+        articleTitle="Gestandaardiseerde e-health modules ontwikkelen"
+        content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
+        iedereen, ongeacht beperking. In dit artikel lees je wat digitale
+        toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
+        title="Start met lezen"
+        linkTo="/about"
+      ></ArticleCard>
       <h2 className="font-display text-3xl font-medium mt-8">Artikelen</h2>
       <ArticleCard
         datePublished="20 jan 2020"
@@ -29,17 +41,6 @@ export default function Index() {
         toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
         title="Start met lezen"
         linkTo="/article1"
-      ></ArticleCard>
-      <ArticleCard
-        datePublished="20 jan 2020"
-        duration="13 min"
-        backgroundImage="url(/images/featured-article-blog.png)"
-        articleTitle="Gestandaardiseerde e-health modules ontwikkelen"
-        content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
-        iedereen, ongeacht beperking. In dit artikel lees je wat digitale
-        toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
-        title="Start met lezen"
-        linkTo="/about"
       ></ArticleCard>
     </Layout>
   );
