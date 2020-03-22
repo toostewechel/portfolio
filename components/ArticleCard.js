@@ -17,23 +17,18 @@ function ArticleCard(props) {
             <span> • {props.duration}</span>
           </p>
           <h2 className="font-display text-3xl font-extrabold mb-2 leading-snug">
-            Toegankelijke online dienstverlening ontwerpen in de zorg
+            {props.articleTitle}
           </h2>
-          <p className="font-body text-normal mb-4 text-gray-800">
-            Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
-            iedereen, ongeacht beperking. In dit artikel lees je wat digitale
-            toegankelijkheid betekent voor een gebruiker, waarom het verstandig
-            is om hier gericht voor te ontwerpen en waar je kunt beginnen met de
-            implementatie.
+          <p className="font-body text-normal mb-4 text-gray-700">
+            {props.content}
           </p>
           <div>
-            <button
-              className="px-4 py-2 border border-gray-900 rounded-full text-xs uppercase font-medium hover:bg-gray-100"
-              title={props.title}
-              href={props.href}
+            <a
+              href={props.linkTo}
+              className="px-4 py-2 border border-gray-500 rounded-full text-xs uppercase font-medium hover:bg-pink-700 hover:text-white"
             >
               {props.title}
-            </button>
+            </a>
           </div>
         </div>
       </div>

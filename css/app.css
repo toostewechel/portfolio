@@ -1,0 +1,12 @@
+/* 
+ * Base styles used for reach styling 
+ * If we don't use it partialy it will cause some
+ * weird flickering issues
+ */
+@import "./reach.css";
+
+/* 
+  * Tailwind utilites, should be second because of css
+  * specificity.
+  */
+@import "./tailwind.css";

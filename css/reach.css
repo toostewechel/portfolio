@@ -1,0 +1,46 @@
+/* Used to detect in JavaScript if apps have loaded styles or not. */
+:root {
+  --reach-menu-button: 1;
+}
+
+[data-reach-menu-button] {
+  outline: none;
+}
+
+[data-reach-menu],
+[data-reach-menu-popover] {
+  display: block;
+  position: absolute;
+  outline: none;
+}
+
+[data-reach-menu][hidden],
+[data-reach-menu-popover][hidden] {
+  display: none;
+}
+
+[data-reach-menu-list],
+[data-reach-menu-items] {
+  display: block;
+  white-space: nowrap;
+  outline: none;
+}
+
+[data-reach-menu-item] {
+  display: block;
+  user-select: none;
+}
+
+/*
+   The dom structure of a MenuLink is reach-menu-item > a,
+   so to target all items we can use `data-reach-menu-item`
+  */
+[data-reach-menu-item] {
+  /* reach-menu-item */
+  cursor: pointer;
+}
+
+/* pseudo pseudo selector */
+[data-reach-menu-item][data-selected] {
+  outline: none;
+}
