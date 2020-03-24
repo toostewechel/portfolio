@@ -1,6 +1,6 @@
 function ArticleCard(props) {
   return (
-    <div className="flex flex-col md:flex-row mt-8 mb-8">
+    <div className="flex flex-col md:flex-row">
       <div
         className="w-full mr-2 h-64 md:w-1/3 md:h-auto"
         style={{
