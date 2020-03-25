@@ -20,12 +20,12 @@ function ArticleCard(props) {
             {props.articleTitle}
           </h2>
           <p className="font-body text-normal mb-4 text-gray-700">
-            {props.content}
+            {props.articleContent}
           </p>
           <div>
             <a
               href={props.linkTo}
-              className="px-4 py-2 border border-gray-500 rounded-full text-xs uppercase font-medium hover:bg-pink-700 hover:text-white"
+              className="px-4 py-2 border border-gray-500 rounded-full text-xs uppercase font-medium hover:bg-pink-700 hover:text-white hover:border-pink-700"
             >
               {props.title}
             </a>

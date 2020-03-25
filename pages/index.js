@@ -1,12 +1,13 @@
 import Layout from "../components/MyLayout";
 import ArticleCard from "../components/ArticleCard";
+import Footer from "../components/Footer";
 
 export default function Index() {
   return (
     <Layout>
       <div className="mt-16 mb-16">
         <h1 className="font-display font-black text-5xl text-gray-900 mb-8 md:mb-4 leading-tight">
-          Ik maak{" "}
+          Ik ontwerp{" "}
           <span className="hover:text-pink-700 leading-tight">digitale</span>{" "}
           producten<span className="text-pink-700">.</span>
         </h1>
@@ -24,8 +25,8 @@ export default function Index() {
         datePublished="20 jan 2020"
         duration="13 min"
         backgroundImage="url(/images/featured-article-online-behandelprogrammas.png)"
-        articleTitle="Gestandaardiseerde e-health modules ontwikkelen"
-        content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
+        articleTitle="Gestandaardiseerde e-health modules ontwikkelen?"
+        articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
         iedereen, ongeacht beperking. In dit artikel lees je wat digitale
         toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
         title="Start met lezen"
@@ -37,12 +38,15 @@ export default function Index() {
         duration="15 min"
         backgroundImage="url(/images/featured-article-blog.png)"
         articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
-        content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
+        articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
         iedereen, ongeacht beperking. In dit artikel lees je wat digitale
         toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
         title="Lees artikel"
         linkTo="/article1"
       ></ArticleCard>
+      <div className="mt-32">
+        <Footer></Footer>
+      </div>
     </Layout>
   );
 }

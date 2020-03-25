@@ -1,5 +1,3 @@
-import Header from "./Header";
-
 const layoutStyle = {
   marginRight: "auto",
   marginLeft: "auto",
@@ -7,11 +5,6 @@ const layoutStyle = {
   padding: "16px"
 };
 
-const Layout = props => (
-  <div style={layoutStyle}>
-    <Header />
-    {props.children}
-  </div>
-);
+const Layout = props => <div style={layoutStyle}>{props.children}</div>;
 
 export default Layout;
