@@ -15,23 +15,11 @@ export default function Index() {
           Ik ben Tom Oostewechel, productontwerper bij Jouw Omgeving in Utrecht.
           Ik maak complexe vraagstukken uit de zorg op een creatieve en visuele
           wijze inzichtelijk en combineer kennis uit verschillende domeinen en
-          vertaal deze naar duurzame en gebruiksvriendelijke oplossingen. Ik
-          schrijf hier over projecten, het ontwerpproces en gerelateerde
+          vertaal deze naar duurzame en gebruiksvriendelijke oplossingen. Op
+          deze site schrijf ik over projecten, het ontwerpproces en gerelateerde
           onderwerpen.
         </p>
       </div>
-      <h2 className="font-display text-3xl font-medium mt-8 mb-8">Projecten</h2>
-      <ArticleCard
-        datePublished="20 jan 2020"
-        duration="13 min"
-        backgroundImage="url(/images/featured-article-online-behandelprogrammas.png)"
-        articleTitle="Gestandaardiseerde e-health modules ontwikkelen?"
-        articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
-        iedereen, ongeacht beperking. In dit artikel lees je wat digitale
-        toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
-        title="Start met lezen"
-        linkTo="/about"
-      ></ArticleCard>
       <h2 className="font-display text-3xl font-medium mt-8 mb-8">Artikelen</h2>
       <ArticleCard
         datePublished="20 jan 2020"

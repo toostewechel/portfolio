@@ -53,7 +53,7 @@ function Article1() {
       </BlogMenu>
       <ArticleLanding
         Content={IntroText}
-        Illustration={Illustration5}
+        Illustration={Illustration2}
         backgroundColor="#f9c5d1"
         backgroundImage="linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)"
         id={slugify(CHAPTERS[0])}
@@ -64,7 +64,7 @@ function Article1() {
       />
       <ChapterOpening
         Content={Part1}
-        Illustration={Illustration2}
+        Illustration={Illustration1}
         backgroundColor="#f6f0c4"
         backgroundImage="linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%)"
         label="Lees deel 1"
@@ -110,6 +110,30 @@ function Article1() {
         id={slugify(`${CHAPTERS[4]} inhoud`)}
         Content={Conclusion}
       />
+      <div className="bg-pink-100 p-4 flex justify-center pb-16">
+        <div
+          className="text-gray-900 p-4"
+          style={{ maxWidth: "980px", width: "100%" }}
+        >
+          <h2 className="text-normal text-gray-900 font-display font-semibold mb-2">
+            Met dank aan
+          </h2>
+          <p className="font-body text-sm mb-1">
+            👨‍🎨{" "}
+            <a href="https://www.jeroenkrul.nl/">Jeroen Krul - Illustraties</a>
+          </p>
+          <p className="font-body text-sm mb-1">
+            👨‍💻{" "}
+            <a href="https://www.jeroenkrul.nl/">Jaco Bovenschen - Website</a>
+          </p>
+          <p className="font-body text-sm mb-1">
+            🔍{" "}
+            <a href="https://www.jeroenkrul.nl/">
+              Kim Timmermans - Eindredactie
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
