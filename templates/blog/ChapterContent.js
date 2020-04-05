@@ -13,7 +13,26 @@ import {
 } from "../../components/SrollAnchor";
 import { SubHeaderContext, ChapterContentContext } from "../../pages/_app";
 
-function Menu({ children }) {
+function ChapterMenu({ headings }) {
+  const [activeSectionAnchor, setActiveSectionAnchor] = React.useState();
+
+  const [activeAnchor, goToAnchor] = useScrollManager(SubHeaderContext);
+
+  const items = React.useMemo(
+    () =>
+      headings.map((title) => ({
+        title,
+        slug: slugify(title),
+      })),
+    [headings]
+  );
+
+  React.useEffect(() => {
+    if (items.find(({ slug }) => slug === activeAnchor)) {
+      setActiveSectionAnchor(activeAnchor);
+    }
+  }, [activeAnchor, items, setActiveSectionAnchor]);
+
   return (
     <nav
       class="mr-auto ml-12 text-left text-sm sticky"
@@ -21,26 +40,24 @@ function Menu({ children }) {
         top: "1rem",
       }}
     >
-      <ol class="flex flex-col">{children}</ol>
+      {items.map(({ slug, title }) => (
+        <li
+          class={`flex border-l-4 ${
+            activeSectionAnchor === slug
+              ? "border-pink-500 text-pink-900"
+              : "border-pink-300 hover:border-pink-500 text-pink-700 hover:text-pink-900"
+          }`}
+        >
+          <a
+            href={`#${slug}`}
+            class="pl-3 p-1 font-medium"
+            onClick={goToAnchor(slug)}
+          >
+            {title}
+          </a>
+        </li>
+      ))}
     </nav>
-  );
-}
-
-function MenuItem({ label, hash }) {
-  const [isActive, onHandleClick] = useScrollManager(hash, SubHeaderContext);
-
-  return (
-    <li
-      class={`flex border-l-4 ${
-        isActive
-          ? "border-pink-500 text-pink-900"
-          : "border-pink-300 hover:border-pink-500 text-pink-700 hover:text-pink-900"
-      }`}
-    >
-      <a href={`#${hash}`} class="pl-3 p-1 font-medium" onClick={onHandleClick}>
-        {label}
-      </a>
-    </li>
   );
 }
 
@@ -48,24 +65,24 @@ const wrapper = function Wrapper(props) {
   let { children } = props;
   let h2;
 
+  const headings = React.useMemo(
+    () =>
+      children
+        .filter((child) => child.props.mdxType === "h3")
+        .map((child) => child.props.children),
+    [children]
+  );
+
   if (props.children[0]?.props.mdxType === "h2") {
     [h2, ...children] = props.children;
   }
-
-  const anchors = children
-    .filter((child) => child.props.mdxType === "h3")
-    .map((child) => child.props.children);
 
   return (
     <>
       <div style={{ maxWidth: "592px" }}>{h2}</div>
       <div class="flex flex-row items-start">
         <div style={{ maxWidth: "592px" }}>{children}</div>
-        <Menu>
-          {anchors.map((anchor) => (
-            <MenuItem label={anchor} hash={slugify(anchor)} />
-          ))}
-        </Menu>
+        <ChapterMenu headings={headings} />
       </div>
     </>
   );

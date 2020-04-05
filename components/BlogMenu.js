@@ -60,13 +60,13 @@ function BlogMenu({ children }) {
 }
 
 BlogMenu.Item = function ({ slug, title }) {
-  const [isActive, onHandleClick] = useScrollManager(slug, ChapterIntroContext);
+  const [, goToAnchor] = useScrollManager(ChapterIntroContext);
 
   return (
     <ReachMenuItem
       as="a"
       href={`#${slug}`}
-      onClick={onHandleClick}
+      onClick={goToAnchor(slug)}
       className="text-pink-900 text-right text-base p-2 pr-0 focus:bg-transparent hover:bg-transparent data-selected:bg-transparent hover:font-weight-bold"
     >
       {title}
