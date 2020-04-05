@@ -1,4 +1,6 @@
 /* Used to detect in JavaScript if apps have loaded styles or not. */
+
+/* purgecss start ignore */
 :root {
   --reach-menu-button: 1;
 }
@@ -44,3 +46,4 @@
 [data-reach-menu-item][data-selected] {
   outline: none;
 }
+/* purgecss end ignore */
