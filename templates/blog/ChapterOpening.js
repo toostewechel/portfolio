@@ -25,12 +25,12 @@ function ChapterOpening({
 
   const hash = `${id}-inhoud`;
 
-  const [, goToAnchor] = useScrollManager(ChapterContentContext);
+  const [_, onHandleClick] = useScrollManager(hash, ChapterContentContext);
 
   return (
     <section
       style={{ backgroundColor, backgroundImage }}
-      className="h-screen w-full p-8 overflow-hidden relative font-body flex justify-center items-center"
+      className="h-screen w-screen p-8 overflow-hidden relative font-body flex justify-center items-center"
       id={id}
       ref={ref}
     >
@@ -48,7 +48,7 @@ function ChapterOpening({
           <div>
             <a
               href={`#${hash}`}
-              onClick={goToAnchor(hash)}
+              onClick={onHandleClick}
               className="mt-4 px-4 py-2 rounded-full bg-pink-700 text-white"
             >
               {label}

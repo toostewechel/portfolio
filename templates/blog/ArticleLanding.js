@@ -13,7 +13,7 @@ import {
   useScrollAnchor,
   useScrollManager,
 } from "../../components/SrollAnchor";
-import { ChapterIntroContext } from "../../pages/_app";
+import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
 
 function ArticleLanding({
   id,
@@ -26,12 +26,12 @@ function ArticleLanding({
 
   const hash = `${id}-inhoud`;
 
-  const [, goToAnchor] = useScrollManager(ChapterIntroContext);
+  const [_, onHandleClick] = useScrollManager(hash, ChapterContentContext);
 
   return (
     <section
       style={{ backgroundColor, backgroundImage }}
-      className="h-screen w-full p-8 overflow-hidden relative font-body flex justify-center items-center"
+      className="h-screen w-screen p-8 overflow-hidden relative font-body flex justify-center items-center"
       id={id}
       ref={ref}
     >
@@ -82,7 +82,7 @@ function ArticleLanding({
             width={34}
             height={34}
             href={`#${hash}`}
-            onClick={goToAnchor(hash)}
+            onClick={onHandleClick}
           />
         </div>
       </div>

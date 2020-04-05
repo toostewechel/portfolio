@@ -34,9 +34,9 @@ function ScrollAnchorProvider({ children, Ctx }) {
           }
         });
 
-      const hash = Object.keys(anchors).find(
-        (key) => anchors[key] === targets[0]
-      );
+      const current = targets[targets.length - 1];
+
+      const hash = Object.keys(anchors).find((key) => anchors[key] === current);
 
       if (hash) {
         setActive(hash);
@@ -108,10 +108,12 @@ function ScrollAnchorProvider({ children, Ctx }) {
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
-const useScrollManager = (Ctx) => {
+const useScrollManager = (hash, Ctx) => {
   const { activeAnchor, anchors } = React.useContext(Ctx);
 
-  const goTo = (hash) => (event) => {
+  const isActive = hash === activeAnchor;
+
+  const goTo = (event) => {
     if (anchors[hash].offsetTop != null) {
       event.preventDefault();
 
@@ -123,7 +125,7 @@ const useScrollManager = (Ctx) => {
     }
   };
 
-  return [activeAnchor, goTo];
+  return [isActive, goTo];
 };
 
 const useScrollAnchor = (hash, Ctx) => {
