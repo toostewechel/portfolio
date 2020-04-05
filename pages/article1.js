@@ -36,14 +36,14 @@ const CHAPTERS = [
   "Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief",
   "De meerwaarde van toegankelijkheid",
   "Toegankelijkheid overstijgt disciplines en domeinen",
-  "Conclusie"
+  "Conclusie",
 ];
 
 function Article1() {
   return (
     <div>
       <BlogMenu>
-        {CHAPTERS.map(chapter => {
+        {CHAPTERS.map((chapter) => {
           const slug = slugify(chapter);
 
           return <BlogMenu.Item key={slug} slug={slug} title={chapter} />;

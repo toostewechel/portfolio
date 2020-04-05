@@ -9,7 +9,7 @@ import * as components from "../../components/MDX";
 import slugify from "../../utils/slugify";
 import {
   useScrollAnchor,
-  useScrollManager
+  useScrollManager,
 } from "../../components/SrollAnchor";
 import { SubHeaderContext, ChapterContentContext } from "../../pages/_app";
 
@@ -18,7 +18,7 @@ function Menu({ children }) {
     <nav
       class="mr-auto ml-12 text-left text-sm sticky"
       style={{
-        top: "1rem"
+        top: "1rem",
       }}
     >
       <ol class="flex flex-col">{children}</ol>
@@ -53,8 +53,8 @@ const wrapper = function Wrapper(props) {
   }
 
   const anchors = children
-    .filter(child => child.props.mdxType === "h3")
-    .map(child => child.props.children);
+    .filter((child) => child.props.mdxType === "h3")
+    .map((child) => child.props.children);
 
   return (
     <>
@@ -62,7 +62,7 @@ const wrapper = function Wrapper(props) {
       <div class="flex flex-row items-start">
         <div style={{ maxWidth: "592px" }}>{children}</div>
         <Menu>
-          {anchors.map(anchor => (
+          {anchors.map((anchor) => (
             <MenuItem label={anchor} hash={slugify(anchor)} />
           ))}
         </Menu>
@@ -91,7 +91,7 @@ function ChapterContent({ Content, id }) {
           components={{
             ...components,
             wrapper,
-            h3
+            h3,
           }}
         >
           <Content />

@@ -5,7 +5,7 @@ import {
   MenuButton as ReachMenuButton,
   MenuItems as ReachMenuItems,
   MenuPopover as ReachMenuPopover,
-  MenuItem as ReachMenuItem
+  MenuItem as ReachMenuItem,
 } from "@reach/menu-button";
 import VisuallyHidden from "@reach/visually-hidden";
 import { useScrollManager } from "../components/SrollAnchor";
@@ -38,7 +38,7 @@ function MenuButton() {
 
 function BlogMenu({ children }) {
   const items = React.Children.toArray(children).filter(
-    item => item.type == BlogMenu.Item
+    (item) => item.type == BlogMenu.Item
   );
 
   return (
@@ -59,7 +59,7 @@ function BlogMenu({ children }) {
   );
 }
 
-BlogMenu.Item = function({ slug, title }) {
+BlogMenu.Item = function ({ slug, title }) {
   const [isActive, onHandleClick] = useScrollManager(slug, ChapterIntroContext);
 
   return (

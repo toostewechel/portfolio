@@ -14,10 +14,10 @@ function ScrollAnchorProvider({ children, Ctx }) {
   const observer = React.useRef();
 
   const onHandleObserver = React.useCallback(
-    entries => {
+    (entries) => {
       const targets = entries
-        .filter(entry => entry.intersectionRatio === 1)
-        .map(entry => entry.target)
+        .filter((entry) => entry.intersectionRatio === 1)
+        .map((entry) => entry.target)
         .sort((a, b) => {
           if (a.target === b) {
             return 0;
@@ -36,7 +36,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
 
       const current = targets[targets.length - 1];
 
-      const hash = Object.keys(anchors).find(key => anchors[key] === current);
+      const hash = Object.keys(anchors).find((key) => anchors[key] === current);
 
       if (hash) {
         setActive(hash);
@@ -48,7 +48,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
   React.useEffect(() => {
     observer.current = new IntersectionObserver(onHandleObserver, {
       rootMargin: "0px",
-      threshold: 1
+      threshold: 1,
     });
 
     return () => {
@@ -64,7 +64,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
 
   const registerAnchors = React.useCallback(
     (hash, anchor) => {
-      setAnchors(anchors => {
+      setAnchors((anchors) => {
         let newAnchors = anchors;
 
         // We only should update the state whenever the
@@ -72,7 +72,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
         if (newAnchors[hash] !== anchor) {
           newAnchors = {
             ...anchors,
-            [hash]: anchor
+            [hash]: anchor,
           };
         }
 
@@ -83,8 +83,8 @@ function ScrollAnchorProvider({ children, Ctx }) {
   );
 
   const unregisterAnchors = React.useCallback(
-    hash => {
-      setAnchors(anchors => {
+    (hash) => {
+      setAnchors((anchors) => {
         let newAnchors = anchors;
 
         if (newAnchors[hash] != null) {
@@ -102,7 +102,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
       anchors,
       activeAnchor: active,
       registerAnchors,
-      unregisterAnchors
+      unregisterAnchors,
     };
   }, [anchors, active, registerAnchors, unregisterAnchors]);
 
@@ -114,14 +114,14 @@ const useScrollManager = (hash, Ctx) => {
 
   const isActive = hash === activeAnchor;
 
-  const goTo = event => {
+  const goTo = (event) => {
     if (anchors[hash].offsetTop != null) {
       event.preventDefault();
 
       window.scroll({
         behavior: "smooth",
         top: anchors[hash].offsetTop,
-        block: "start"
+        block: "start",
       });
     }
   };
@@ -149,5 +149,5 @@ export {
   ScrollAnchorProvider,
   useScrollManager,
   useScrollAnchor,
-  createScrollAnchorContext
+  createScrollAnchorContext,
 };

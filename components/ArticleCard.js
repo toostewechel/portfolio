@@ -7,7 +7,7 @@ function ArticleCard(props) {
           backgroundImage: props.backgroundImage,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          borderRadius: "10px"
+          borderRadius: "10px",
         }}
       ></div>
       <div className="md:w-2/3 p-4">

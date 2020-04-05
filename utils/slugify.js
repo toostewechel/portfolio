@@ -1,4 +1,4 @@
-const slugify = str =>
+const slugify = (str) =>
   str
     .toLowerCase()
     .replace(/[^\w\s-]/g, "") // remove non-word [a-z0-9_], non-whitespace, non-hyphen characters

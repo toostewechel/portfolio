@@ -4,7 +4,7 @@ import "../css/app.css";
 
 import {
   ScrollAnchorProvider,
-  createScrollAnchorContext
+  createScrollAnchorContext,
 } from "../components/SrollAnchor";
 
 import { MDXProvider } from "@mdx-js/react";
@@ -38,5 +38,5 @@ export {
   MyApp as default,
   ChapterIntroContext,
   SubHeaderContext,
-  ChapterContentContext
+  ChapterContentContext,
 };

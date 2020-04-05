@@ -8,7 +8,7 @@ import * as components from "../../components/MDX";
 //Import Scroll
 import {
   useScrollAnchor,
-  useScrollManager
+  useScrollManager,
 } from "../../components/SrollAnchor";
 import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
 
@@ -19,7 +19,7 @@ function ChapterOpening({
   illustration,
   Content,
   label,
-  href
+  href,
 }) {
   const ref = useScrollAnchor(id, ChapterIntroContext);
 
