@@ -64,11 +64,15 @@ function BlogMenu({ children }) {
               }}
             >
               <div
-                className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent fixed top-0 left-0 right-0 bottom-0 block bg-pink-100"
-                style={{ transform: "translate3d(36%, -58%, 0)" }}
+                className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
+                style={{
+                  transform: "translate3d(36%, -58%, 0)",
+                  width: 1024,
+                  height: 1024,
+                }}
               />
 
-              <div className="w-full">
+              <div className="w-full relative" style={{ width: 524 }}>
                 <div className="relative right-0 mt-4">
                   <ReachMenuItems>{items}</ReachMenuItems>
                 </div>
