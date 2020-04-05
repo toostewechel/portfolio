@@ -16,7 +16,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body class="subpixel-antialiased">
+        <body className="subpixel-antialiased">
           <Main />
           <NextScript />
         </body>
