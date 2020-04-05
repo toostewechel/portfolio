@@ -11,7 +11,7 @@ import ReadMore from "../../components/ReadMore";
 //Import Sroll
 import {
   useScrollAnchor,
-  useScrollManager
+  useScrollManager,
 } from "../../components/SrollAnchor";
 import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
 
@@ -19,8 +19,8 @@ function ArticleLanding({
   id,
   backgroundColor,
   backgroundImage,
-  Illustration,
-  Content
+  illustration,
+  Content,
 }) {
   const ref = useScrollAnchor(id, ChapterIntroContext);
 
@@ -40,7 +40,7 @@ function ArticleLanding({
         className="grid grid-cols-12 grid-rows-6 w-full h-full relative p-4"
       >
         <div className="row-start-2 row-end-7 col-start-5 col-end-13 flex items-end">
-          <Illustration style={{ "min-width": "calc(100% * 1.5)" }} />
+          <img src={illustration} style={{ "min-width": "calc(100% * 1.5)" }} />
         </div>
         <div className="row-start-2 row-end-6 col-start-1 col-end-7 flex flex-col justify-center">
           <MDXProvider components={components}>
