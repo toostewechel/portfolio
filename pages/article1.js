@@ -113,30 +113,34 @@ function Article1() {
         id={slugify(`${CHAPTERS[4]} inhoud`)}
         Content={Conclusion}
       />
-      <div className="bg-pink-100 p-4 flex justify-center pb-16">
+      <footer className="bg-pink-100 p-4 flex justify-center pb-16">
         <div
           className="text-gray-900 p-4"
           style={{ maxWidth: "980px", width: "100%" }}
         >
-          <h2 className="text-normal text-gray-900 font-display font-semibold mb-2">
+          <h5 className="text-normal text-gray-900 font-display font-semibold mb-2">
             Met dank aan
-          </h2>
-          <p className="font-body text-sm mb-1">
-            <span aria-hidden>👨‍🎨 </span>
-            <a href="https://www.jeroenkrul.nl/">Jeroen Krul - Illustraties</a>
-          </p>
-          <p className="font-body text-sm mb-1">
-            <span aria-hidden>👨‍💻 </span>
-            <a href="https://www.jeroenkrul.nl/">Jaco Bovenschen - Website</a>
-          </p>
-          <p className="font-body text-sm mb-1">
-            <span aria-hidden>🔍 </span>
-            <a href="https://www.jeroenkrul.nl/">
-              Kim Timmermans - Eindredactie
-            </a>
-          </p>
+          </h5>
+          <ul>
+            <li className="font-body text-sm mb-1">
+              <span aria-hidden>👨‍🎨 </span>
+              <a href="https://www.jeroenkrul.nl/">
+                Jeroen Krul - Illustraties
+              </a>
+            </li>
+            <li className="font-body text-sm mb-1">
+              <span aria-hidden>👨‍💻 </span>
+              <a href="https://www.jeroenkrul.nl/">Jaco Bovenschen - Website</a>
+            </li>
+            <li className="font-body text-sm mb-1">
+              <span aria-hidden>🔍 </span>
+              <a href="https://www.jeroenkrul.nl/">
+                Kim Timmermans - Eindredactie
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
