@@ -2,8 +2,9 @@
 import * as React from "react";
 
 //Import Scroll
-import { useScrollAnchor } from "../components/SrollAnchor";
 import slugify from "../utils/slugify";
+
+import Head from "next/head";
 
 //Import BlogMenu
 import BlogMenu from "../components/BlogMenu";
@@ -41,7 +42,11 @@ const CHAPTERS = [
 
 function Article1() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Toegankelijke online dienstverlening ontwerpen in de zorg</title>
+      </Head>
+
       <BlogMenu>
         {CHAPTERS.map((chapter) => {
           const slug = slugify(chapter);
@@ -132,7 +137,7 @@ function Article1() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
