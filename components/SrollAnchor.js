@@ -16,7 +16,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
   const onHandleObserver = React.useCallback(
     (entries) => {
       const targets = entries
-        .filter((entry) => entry.intersectionRatio === 1)
+        .filter((entry) => entry.intersectionRatio === 0)
         .map((entry) => entry.target)
         .sort((a, b) => {
           if (a.target === b) {
@@ -47,8 +47,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
 
   React.useEffect(() => {
     observer.current = new IntersectionObserver(onHandleObserver, {
-      rootMargin: "0px",
-      threshold: 1,
+      rootMargin: "0px 0px -100%",
     });
 
     return () => {
