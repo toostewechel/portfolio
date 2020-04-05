@@ -122,15 +122,15 @@ function Article1() {
             Met dank aan
           </h2>
           <p className="font-body text-sm mb-1">
-            👨‍🎨{" "}
+            <span aria-hidden>👨‍🎨 </span>
             <a href="https://www.jeroenkrul.nl/">Jeroen Krul - Illustraties</a>
           </p>
           <p className="font-body text-sm mb-1">
-            👨‍💻{" "}
+            <span aria-hidden>👨‍💻 </span>
             <a href="https://www.jeroenkrul.nl/">Jaco Bovenschen - Website</a>
           </p>
           <p className="font-body text-sm mb-1">
-            🔍{" "}
+            <span aria-hidden>🔍 </span>
             <a href="https://www.jeroenkrul.nl/">
               Kim Timmermans - Eindredactie
             </a>
