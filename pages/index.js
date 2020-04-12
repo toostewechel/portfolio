@@ -23,7 +23,7 @@ export default function Index() {
       <h2 className="font-display text-3xl font-medium mt-8 mb-8">Artikelen</h2>
       <ArticleCard
         datePublished="20 jan 2020"
-        duration="15 min"
+        duration="14 min"
         backgroundImage="url(/images/featured-article-blog.png)"
         articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
         articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
