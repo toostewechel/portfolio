@@ -45,11 +45,11 @@ function ChapterOpening({
           <MDXProvider components={components}>
             <Content className="pr-16" />
           </MDXProvider>
-          <div>
+          <div className="mt-8">
             <a
               href={`#${hash}`}
               onClick={onHandleClick}
-              className="mt-4 px-4 py-2 rounded-full bg-pink-700 text-white"
+              className="px-4 py-2 rounded-full bg-pink-700 text-white"
             >
               {label}
             </a>

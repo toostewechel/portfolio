@@ -56,7 +56,7 @@ function Article1() {
       </BlogMenu>
       <ArticleLanding
         Content={IntroText}
-        illustration={ILLUSTRATION_2}
+        illustration={ILLUSTRATION_1}
         backgroundColor="#f9c5d1"
         backgroundImage="linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)"
         id={slugify(CHAPTERS[0])}
@@ -67,7 +67,7 @@ function Article1() {
       />
       <ChapterOpening
         Content={Part1}
-        illustration={ILLUSTRATION_1}
+        illustration={ILLUSTRATION_2}
         backgroundColor="#f6f0c4"
         backgroundImage="linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%)"
         label="Lees deel 1"

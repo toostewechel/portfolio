@@ -4,7 +4,7 @@ function Footer() {
       <div className="w-1/3">
         <h3 className="font-display font-semibold">Contact</h3>
         <p className="text-normal">0612647976</p>
-        <p className="text-normal">tomoostewechel@gmail.com</p>
+        <p className="text-normal">info@snapshots.design</p>
       </div>
       <div className="w-1/3">
         <h3 className="font-display font-semibold">Locatie</h3>
