@@ -1,11 +1,11 @@
-function Navbar() {
+function Header() {
   return (
-    <nav>
+    <header>
       <div class="flex-shrink-0">
         <img className="h-10 w-10" src="/images/logo.svg"></img>
       </div>
-    </nav>
+    </header>
   );
 }
 
-export default Navbar;
+export default Header;

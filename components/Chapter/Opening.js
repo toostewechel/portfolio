@@ -3,23 +3,19 @@ import * as React from "react";
 
 //Import MDXProvider and MDX components
 import { MDXProvider } from "@mdx-js/react";
-import * as components from "../../components/MDX";
+import * as components from "../MDX";
 
 //Import Scroll
-import {
-  useScrollAnchor,
-  useScrollManager,
-} from "../../components/SrollAnchor";
+import { useScrollAnchor, useScrollManager } from "../SrollAnchor";
 import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
 
-function ChapterOpening({
+function Opening({
   id,
   backgroundColor,
   backgroundImage,
   illustration,
   Content,
   label,
-  href,
 }) {
   const ref = useScrollAnchor(id, ChapterIntroContext);
 
@@ -28,7 +24,7 @@ function ChapterOpening({
   const [_, onHandleClick] = useScrollManager(hash, ChapterContentContext);
 
   return (
-    <section
+    <div
       style={{ backgroundColor, backgroundImage }}
       className="h-screen w-screen p-8 overflow-hidden relative font-body flex justify-center items-center"
       id={id}
@@ -56,8 +52,8 @@ function ChapterOpening({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
-export default ChapterOpening;
+export default Opening;

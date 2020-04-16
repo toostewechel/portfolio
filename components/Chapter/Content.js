@@ -3,14 +3,11 @@ import * as React from "react";
 
 //Import MDXProvider and MDX components
 import { MDXProvider } from "@mdx-js/react";
-import * as components from "../../components/MDX";
+import * as components from "../MDX";
 
 //Import Scroll
 import slugify from "../../utils/slugify";
-import {
-  useScrollAnchor,
-  useScrollManager,
-} from "../../components/SrollAnchor";
+import { useScrollAnchor, useScrollManager } from "../SrollAnchor";
 import { SubHeaderContext, ChapterContentContext } from "../../pages/_app";
 
 function Menu({ children }) {
@@ -78,7 +75,7 @@ const h3 = function Heading3(props) {
   return React.createElement(components.h3, { ...props, id: hash, ref });
 };
 
-function ChapterContent({ Content, id }) {
+function ArticleContent({ Content, id }) {
   const ref = useScrollAnchor(id, ChapterContentContext);
 
   return (
@@ -101,4 +98,6 @@ function ChapterContent({ Content, id }) {
   );
 }
 
-export default ChapterContent;
+ArticleContent.displayName = "Content";
+
+export default ArticleContent;

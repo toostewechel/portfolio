@@ -4,7 +4,7 @@ import React from "react";
 class CustomDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <html lang="nl">
         <Head>
           <meta charSet="utf-8" />
           <meta
