@@ -24,8 +24,15 @@ function Footer() {
         <a href="https://medium.com/@tomoostewechel" target="_blank">
           <img
             src="/images/medium-logo.png"
-            className="w-6 h-6 inline-flex"
+            className="w-6 h-6 inline-flex mr-2"
             title="Medium"
+          ></img>
+        </a>
+        <a href="https://github.com/toostewechel" target="_blank">
+          <img
+            src="/images/github-logo.png"
+            className="w-6 h-6 inline-flex mr-2"
+            title="GitHub"
           ></img>
         </a>
       </div>
