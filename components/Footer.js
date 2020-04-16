@@ -11,42 +11,68 @@ function Footer() {
         <p className="text-normal">Utrecht, Nederland</p>
       </div>
       <div className="w-1/3">
-        <a
-          href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
-          target="_blank"
-        >
-          <img
-            aria-hidden="true"
-            src="/images/linkedin-logo.png"
-            className="w-6 h-6 inline-flex mr-2"
-            title="LinkedIN"
-          ></img>
-          <span className="visually-hidden">
-            LinkedIN profiel van Tom Oostewechel
-          </span>
-        </a>
-        <a href="https://medium.com/@tomoostewechel" target="_blank">
-          <img
-            aria-hidden="true"
-            src="/images/medium-logo.png"
-            className="w-6 h-6 inline-flex mr-2"
-            title="Medium"
-          ></img>
-          <span className="visually-hidden">
-            Medium profiel van Tom Oostewechel
-          </span>
-        </a>
-        <a href="https://github.com/toostewechel" target="_blank">
-          <img
-            aria-hidden="true"
-            src="/images/github-logo.png"
-            className="w-6 h-6 inline-flex mr-2"
-            title="Github"
-          ></img>
-          <span className="visually-hidden">
-            Github profiel van Tom Oostewechel
-          </span>
-        </a>
+        <div className="flex flex-row">
+          <a
+            href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex align-center justify-center mr-2"
+            style={{
+              width: "48px",
+              height: "48px",
+            }}
+          >
+            <img
+              aria-hidden="true"
+              src="/images/linkedin-logo.png"
+              className="h-6 w-6"
+              alt="LinkedIN"
+            ></img>
+            <span className="visually-hidden">
+              LinkedIN profiel van Tom Oostewechel
+            </span>
+          </a>
+          <a
+            href="https://medium.com/@tomoostewechel"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex align-center justify-center mr-2"
+            style={{
+              width: "48px",
+              height: "48px",
+            }}
+          >
+            <img
+              aria-hidden="true"
+              src="/images/medium-logo.png"
+              className="h-6 w-6"
+              alt="Medium"
+            ></img>
+            <span className="visually-hidden">
+              Medium profiel van Tom Oostewechel
+            </span>
+          </a>
+          <a
+            href="https://github.com/toostewechel"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex align-center justify-center mr-2"
+            style={{
+              width: "48px",
+              height: "48px",
+            }}
+          >
+            <img
+              aria-hidden="true"
+              src="/images/github-logo.png"
+              className="h-6 w-6"
+              alt="Github"
+            ></img>
+            <span className="visually-hidden">
+              Github profiel van Tom Oostewechel
+            </span>
+          </a>
+        </div>
       </div>
     </footer>
   );

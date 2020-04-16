@@ -2,18 +2,14 @@ function ArticleCard(props) {
   return (
     <section>
       <div className="flex flex-col md:flex-row">
-        <div
-          className="w-full mr-2 h-64 md:w-1/3 md:h-auto"
-          style={{
-            backgroundImage: props.backgroundImage,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            borderRadius: "10px",
-          }}
-        ></div>
+        <img
+          className="w-full mr-2 h-64 md:w-1/3 md:h-auto object-cover rounded-lg"
+          src={props.src}
+          alt={props.articleTitle}
+        ></img>
         <div className="md:w-2/3 p-4">
           <div className="flex flex-col">
-            <p className="text-gray-600 font-body font-semibold">
+            <p className="text-gray-700 font-body font-semibold">
               {props.datePublished}
               <span> • {props.duration}</span>
             </p>
