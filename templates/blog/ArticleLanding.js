@@ -48,13 +48,13 @@ function ArticleLanding({
           </MDXProvider>
           <span className="mt-6">
             <div className="flex flex-row text-gray-900">
-              <img class="w-10 h-10 mr-2" src="images/avatar-tom.png" />
-              <div class="flex-col self-center">
+              <img className="w-10 h-10 mr-2" src="images/avatar-tom.png" />
+              <div className="flex-col self-center">
                 <address>
                   <a
                     rel="author"
                     href="#"
-                    class="text-body font-semibold text-sm not-italic"
+                    className="text-body font-semibold text-sm not-italic"
                   >
                     Tom Oostewechel
                   </a>
@@ -75,7 +75,7 @@ function ArticleLanding({
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-8 flex justify-center">
         <div
-          class="flex flex-row flex-start w-full p-2 flex justify-center text-gray-900"
+          className="flex flex-row flex-start w-full p-2 flex justify-center text-gray-900"
           style={{ maxWidth: "1128px" }}
         >
           <ReadMore

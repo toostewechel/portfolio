@@ -128,7 +128,7 @@ function Article1() {
             Opening={
               <Chapter.Opening
                 Content={Part4}
-                illustration={ILLUSTRATION_4}
+                illustration={ILLUSTRATION_1}
                 backgroundColor="#9ab5e1"
                 backgroundImage="linear-gradient(315deg, #9ab5e1 0%, #f39fdc 74%)"
                 label="Lees de conclusie"
@@ -157,6 +157,7 @@ function Article1() {
                     href="https://www.jeroenkrul.nl/"
                     target="_blank"
                     rel="noreferrer noopener"
+                    className="font-body font-medium text-pink-700 hover:underline"
                   >
                     Jeroen Krul - Illustraties
                   </a>
@@ -167,6 +168,7 @@ function Article1() {
                     href="https://github.com/jbovenschen"
                     target="_blank"
                     rel="noreferrer noopener"
+                    className="font-body font-medium text-pink-700 hover:underline"
                   >
                     Jaco Bovenschen - Website
                   </a>
@@ -177,6 +179,7 @@ function Article1() {
                     href="https://www.linkedin.com/in/kim-timmermans-8803b394/"
                     target="_blank"
                     rel="noreferrer noopener"
+                    className="font-body font-medium text-pink-700 hover:underline"
                   >
                     Kim Timmermans - Eindredactie
                   </a>
