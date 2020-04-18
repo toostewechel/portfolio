@@ -39,7 +39,7 @@ export default function Index() {
             duration="15 min"
             src="/images/featured-article-blog.png"
             articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
-            articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen, ongeacht beperking. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
+            articleContent="In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
             title="Lees artikel"
             linkTo="/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg"
           ></ArticleCard>

@@ -39,7 +39,7 @@ function Icon({ isOpen }) {
 
 function MenuButton({ isOpen }) {
   return (
-    <ReachMenuButton className="z-10 relative">
+    <ReachMenuButton className="z-10 relative bg-transparent">
       <Icon isOpen={isOpen} />
       <VisuallyHidden>{isOpen ? "Sluit menu" : "Open menu"}</VisuallyHidden>
     </ReachMenuButton>

@@ -63,7 +63,7 @@ function ArticleLanding({
               <img
                 alt="avatar"
                 className="w-10 h-10 mr-2"
-                src="images/avatar-tom.png"
+                src="/images/avatar-tom.png"
               />
               <div className="flex-col self-center">
                 <p className="text-body font-semibold text-sm not-italic">

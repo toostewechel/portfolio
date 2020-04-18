@@ -6,12 +6,25 @@ const withMDX = require("@next/mdx")({
 
 const optimizedImages = require("next-optimized-images");
 
-module.exports = withPlugins([
-  [optimizedImages, {}],
+module.exports = withPlugins(
   [
-    withMDX,
-    {
-      pageExtensions: ["js", "jsx", "md", "mdx"],
-    },
+    [optimizedImages, {}],
+    [
+      withMDX,
+      {
+        pageExtensions: ["js", "jsx", "md", "mdx"],
+      },
+    ],
   ],
-]);
+  {
+    exportTrailingSlash: true,
+    exportPathMap: function () {
+      return {
+        "/": { page: "/" },
+        "/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg": {
+          page: "/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg",
+        },
+      };
+    },
+  }
+);
