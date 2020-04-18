@@ -17,18 +17,14 @@ import Chapter from "../components/Chapter";
 import ILLUSTRATION_1 from "../illustrations/1.svg";
 import ILLUSTRATION_2 from "../illustrations/2.svg";
 import ILLUSTRATION_4 from "../illustrations/4.svg";
+import ILLUSTRATION_5 from "../illustrations/5.svg";
 import ILLUSTRATION_6 from "../illustrations/6.svg";
 
 //Import Blog Content
-import IntroText from "../content/IntroText.mdx";
 import Chapter1 from "../content/Chapter1.mdx";
-import Part1 from "../content/Part1.mdx";
 import Chapter2 from "../content/Chapter2.mdx";
-import Part2 from "../content/Part2.mdx";
 import Chapter3 from "../content/Chapter3.mdx";
-import Part3 from "../content/Part3.mdx";
 import Chapter4 from "../content/Chapter4.mdx";
-import Part4 from "../content/Part4.mdx";
 import Conclusion from "../content/Conclusion.mdx";
 
 const CHAPTERS = [
@@ -39,10 +35,14 @@ const CHAPTERS = [
   "Conclusie",
 ];
 
-function Article1() {
+function Article() {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="Toegankelijke online dienstverlening ontwerpen in de zorg"
+        />
         <title>Toegankelijke online dienstverlening ontwerpen in de zorg</title>
       </Head>
 
@@ -56,8 +56,9 @@ function Article1() {
       <main>
         <article>
           <ArticleLanding
-            Content={IntroText}
-            illustration={ILLUSTRATION_1}
+            title="Toegankelijke online dienstverlening ontwerpen in de zorg"
+            content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen, ongeacht beperking. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
+            illustration={ILLUSTRATION_5}
             backgroundColor="#f9c5d1"
             backgroundImage="linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)"
             id={slugify(CHAPTERS[0])}
@@ -73,7 +74,8 @@ function Article1() {
           <Chapter
             Opening={
               <Chapter.Opening
-                Content={Part1}
+                title="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
+                content="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
                 illustration={ILLUSTRATION_2}
                 backgroundColor="#f6f0c4"
                 backgroundImage="linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%)"
@@ -91,7 +93,8 @@ function Article1() {
           <Chapter
             Opening={
               <Chapter.Opening
-                Content={Part2}
+                title="De meerwaarde van toegankelijkheid"
+                content="Het ontwikkelen van online diensten in de zorg brengt al genoeg uitdagingen met zich mee. Zouden we ons om nog een ‘extra’ ding druk moeten maken?"
                 illustration={ILLUSTRATION_6}
                 backgroundColor="#f6f0c4"
                 backgroundImage="linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%)"
@@ -109,7 +112,8 @@ function Article1() {
           <Chapter
             Opening={
               <Chapter.Opening
-                Content={Part3}
+                title="Toegankelijkheid overstijgt disciplines en domeinen"
+                content="De hoeveelheid informatie rondom de implementatie van toegankelijkheid is overweldigend. Dit maakt het een uitdaging om te bepalen wie waar verantwoordelijk voor is en om met toegankelijkheid te beginnen."
                 illustration={ILLUSTRATION_4}
                 backgroundColor="#f6f0c4"
                 backgroundImage="linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%)"
@@ -127,7 +131,8 @@ function Article1() {
           <Chapter
             Opening={
               <Chapter.Opening
-                Content={Part4}
+                title="Conclusie"
+                content="Digitale toegankelijkheid is niet een vakje dat je zomaar aan kunt vinken. Het is een complex organisatorisch vraagstuk waarbij verschillende disciplines samen moeten werken om een toegankelijke ervaring te creëren voor gebruikers."
                 illustration={ILLUSTRATION_1}
                 backgroundColor="#9ab5e1"
                 backgroundImage="linear-gradient(315deg, #9ab5e1 0%, #f39fdc 74%)"
@@ -193,4 +198,4 @@ function Article1() {
   );
 }
 
-export default Article1;
+export default Article;

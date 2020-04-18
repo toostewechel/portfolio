@@ -8,7 +8,7 @@ export default function Index() {
   return (
     <div>
       <Head>
-        <meta name="Description" content="Portfolio - Tom Oostewechel" />
+        <meta name="description" content="Portfolio - Tom Oostewechel" />
         <title>Portfolio - Tom Oostewechel</title>
       </Head>
       <Layout>
@@ -39,11 +39,9 @@ export default function Index() {
             duration="15 min"
             src="/images/featured-article-blog.png"
             articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
-            articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor
-        iedereen, ongeacht beperking. In dit artikel lees je wat digitale
-        toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
+            articleContent="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen, ongeacht beperking. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig"
             title="Lees artikel"
-            linkTo="/article1"
+            linkTo="/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg"
           ></ArticleCard>
         </main>
         <footer className="mt-32">

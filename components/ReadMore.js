@@ -9,6 +9,7 @@ function ReadMore({ href, onClick }) {
           fill="currentColor"
         />
       </svg>
+      <span className="visually-hidden">Begin met lezen</span>
     </a>
   );
 }
