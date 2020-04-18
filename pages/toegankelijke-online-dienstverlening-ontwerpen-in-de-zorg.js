@@ -35,10 +35,6 @@ const CHAPTERS = [
 const { Content } = Article;
 const { Chapter } = Content;
 
-console.log(Content);
-
-console.log(Chapter);
-
 function Page() {
   return (
     <>

@@ -115,7 +115,9 @@ const useScrollManager = (hash, Ctx) => {
 
   const goTo = (event) => {
     if (anchors[hash].offsetTop != null) {
-      event.preventDefault();
+      if (event) {
+        event.preventDefault();
+      }
 
       window.scroll({
         behavior: "smooth",

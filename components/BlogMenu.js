@@ -23,8 +23,8 @@ function Icon({ isOpen }) {
     >
       {isOpen ? (
         <>
-          <line x1={5} x2={45} y1={5} y2={45} strokeWidth={3} />
-          <line x1={5} x2={45} y1={45} y2={5} strokeWidth={3} />
+          <line x1={8} x2={42} y1={8} y2={42} strokeWidth={2} />
+          <line x1={8} x2={42} y1={42} y2={8} strokeWidth={2} />
         </>
       ) : (
         <>
@@ -90,8 +90,8 @@ BlogMenu.Item = function ({ slug, title }) {
     <ReachMenuItem
       as="a"
       href={`#${slug}`}
-      onClick={onHandleClick}
-      className="text-pink-900 text-right text-base p-2 pr-0 focus:bg-transparent hover:bg-transparent data-selected:bg-transparent hover:font-weight-bold"
+      onSelect={onHandleClick}
+      className="text-pink-900 text-right text-base p-2 pr-0 hover:underline"
     >
       {title}
     </ReachMenuItem>
