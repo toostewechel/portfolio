@@ -10,7 +10,7 @@ import {
 import VisuallyHidden from "@reach/visually-hidden";
 import { useScrollManager } from "../components/SrollAnchor";
 
-import { ChapterIntroContext } from "../pages/_app";
+import { ChapterIntroContext } from "./Article/Context";
 
 function Icon({ isOpen }) {
   return (

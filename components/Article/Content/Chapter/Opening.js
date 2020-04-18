@@ -1,13 +1,9 @@
 //Import React module
 import * as React from "react";
 
-//Import MDXProvider and MDX components
-import { MDXProvider } from "@mdx-js/react";
-import * as components from "../MDX";
-
 //Import Scroll
-import { useScrollAnchor, useScrollManager } from "../SrollAnchor";
-import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
+import { useScrollAnchor, useScrollManager } from "../../../SrollAnchor";
+import { ChapterIntroContext, ChapterContentContext } from "../../Context";
 
 function Opening({
   id,

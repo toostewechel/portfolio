@@ -13,7 +13,10 @@ import {
   useScrollAnchor,
   useScrollManager,
 } from "../../components/SrollAnchor";
-import { ChapterIntroContext, ChapterContentContext } from "../../pages/_app";
+import {
+  ChapterIntroContext,
+  ChapterContentContext,
+} from "../../components/Article/Context";
 
 function ArticleLanding({
   id,

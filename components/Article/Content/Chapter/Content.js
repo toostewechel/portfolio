@@ -3,12 +3,12 @@ import * as React from "react";
 
 //Import MDXProvider and MDX components
 import { MDXProvider } from "@mdx-js/react";
-import * as components from "../MDX";
+import * as components from "../../../MDX";
 
 //Import Scroll
-import slugify from "../../utils/slugify";
-import { useScrollAnchor, useScrollManager } from "../SrollAnchor";
-import { SubHeaderContext, ChapterContentContext } from "../../pages/_app";
+import slugify from "../../../../utils/slugify";
+import { useScrollAnchor, useScrollManager } from "../../../SrollAnchor";
+import { SubHeaderContext, ChapterContentContext } from "../../Context";
 
 function Menu({ children }) {
   return (

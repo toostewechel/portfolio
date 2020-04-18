@@ -1,8 +1,8 @@
 import React from "react";
 
-import slugify from "../utils/slugify";
+import slugify from "../../utils/slugify";
 
-import BlogMenu from "./BlogMenu";
+import BlogMenu from "../BlogMenu";
 
 import Link from "next/link";
 
@@ -10,7 +10,6 @@ function Header({ chapters }) {
   const [isTop, setIsTop] = React.useState(true);
 
   React.useLayoutEffect(() => {
-    console.log("effect");
     if (window.scrollY !== 0) {
       setIsTop(false);
     }
