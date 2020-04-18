@@ -6,12 +6,10 @@ import slugify from "../utils/slugify";
 
 import Head from "next/head";
 
-//Import BlogMenu
-import BlogMenu from "../components/BlogMenu";
-
 //Import Blog Templates
 import ArticleLanding from "../templates/blog/ArticleLanding";
 import Chapter from "../components/Chapter";
+import ArticleHeader from "../components/ArticleHeader";
 
 //Import Blog Illustrations
 import ILLUSTRATION_1 from "../illustrations/1.svg";
@@ -45,14 +43,7 @@ function Article() {
         />
         <title>Toegankelijke online dienstverlening ontwerpen in de zorg</title>
       </Head>
-
-      <BlogMenu>
-        {CHAPTERS.map((chapter) => {
-          const slug = slugify(chapter);
-
-          return <BlogMenu.Item key={slug} slug={slug} title={chapter} />;
-        })}
-      </BlogMenu>
+      <ArticleHeader chapters={CHAPTERS} />
       <main>
         <article>
           <ArticleLanding

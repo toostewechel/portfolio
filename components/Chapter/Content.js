@@ -41,6 +41,18 @@ function MenuItem({ label, hash }) {
   );
 }
 
+function SideMenu({ anchors }) {
+  return (
+    <div class="hidden lg:flex">
+      <Menu>
+        {anchors.map((anchor) => (
+          <MenuItem label={anchor} hash={slugify(anchor)} />
+        ))}
+      </Menu>
+    </div>
+  );
+}
+
 const wrapper = function Wrapper(props) {
   let { children } = props;
   let h2;
@@ -58,11 +70,7 @@ const wrapper = function Wrapper(props) {
       <div style={{ maxWidth: "592px" }}>{h2}</div>
       <div class="flex flex-row items-start">
         <div style={{ maxWidth: "592px" }}>{children}</div>
-        <Menu>
-          {anchors.map((anchor) => (
-            <MenuItem label={anchor} hash={slugify(anchor)} />
-          ))}
-        </Menu>
+        <SideMenu anchors={anchors} />
       </div>
     </>
   );

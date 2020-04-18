@@ -52,36 +52,34 @@ function BlogMenu({ children }) {
   );
 
   return (
-    <nav className="fixed top-0 right-0 p-8" style={{ zIndex: 1 }}>
-      <ReachMenu>
-        {({ isOpen }) => (
-          <>
-            <MenuButton isOpen={isOpen} />
-            <ReachMenuPopover
-              portal={false}
+    <ReachMenu>
+      {({ isOpen }) => (
+        <>
+          <MenuButton isOpen={isOpen} />
+          <ReachMenuPopover
+            portal={false}
+            style={{
+              right: "2rem",
+            }}
+          >
+            <div
+              className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
               style={{
-                right: "2rem",
+                transform: "translate3d(36%, -58%, 0)",
+                width: 1024,
+                height: 1024,
               }}
-            >
-              <div
-                className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
-                style={{
-                  transform: "translate3d(36%, -58%, 0)",
-                  width: 1024,
-                  height: 1024,
-                }}
-              />
+            />
 
-              <div className="w-full relative" style={{ width: 524 }}>
-                <div className="relative right-0 mt-4">
-                  <ReachMenuItems>{items}</ReachMenuItems>
-                </div>
+            <div className="w-full relative" style={{ width: 524 }}>
+              <div className="relative right-0 mt-4">
+                <ReachMenuItems>{items}</ReachMenuItems>
               </div>
-            </ReachMenuPopover>
-          </>
-        )}
-      </ReachMenu>
-    </nav>
+            </div>
+          </ReachMenuPopover>
+        </>
+      )}
+    </ReachMenu>
   );
 }
 
