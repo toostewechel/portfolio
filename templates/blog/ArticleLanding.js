@@ -34,27 +34,29 @@ function ArticleLanding({
   return (
     <section
       style={{ backgroundColor, backgroundImage }}
-      className="h-screen w-screen p-8 overflow-hidden relative font-body flex justify-center items-center"
+      className="h-screen w-screen p-4 overflow-hidden relative font-body flex justify-center items-center"
       id={id}
       ref={ref}
     >
       <div
         style={{ maxWidth: "1128px", maxHeight: "800px" }}
-        className="grid grid-cols-12 grid-rows-6 w-full h-full relative p-4"
+        className="flex items-center w-full h-full relative p-2  md:grid md:grid-cols-12 md:grid-rows-6 md:p-4"
       >
-        <div className="row-start-2 row-end-7 col-start-5 col-end-13 flex items-end">
+        <div className="hidden md:row-start-2 md:row-end-7 md:col-start-5 md:col-end-13 md:flex md:items-end">
           <img
             alt={props.title}
             src={illustration}
             style={{ minWidth: "calc(100% * 1.5)" }}
           />
         </div>
-        <div className="row-start-2 row-end-6 col-start-1 col-end-7 flex flex-col justify-center">
-          <div className="pr-8 text-lg leading-relaxed text-gray-900 tracking-wide">
-            <h1 className="font-display font-extrabold text-3xl mb-4 text-gray-900">
+        <div className="md:row-start-2 md:row-end-6 md:col-start-1 md:col-end-7 md:flex md:flex-col justify-center">
+          <div className="lg:pr-8 text-lg leading-relaxed text-gray-900 tracking-wide">
+            <h1 className="font-display font-extrabold text-2xl lg:text-3xl mb-4 text-gray-900">
               {props.title}
             </h1>
-            <p className="font-body font-normal mb-4">{props.content}</p>
+            <p className="font-body text-base lg:text-lg mb-4">
+              {props.content}
+            </p>
           </div>
           <span className="mt-6">
             <div className="flex flex-row text-gray-900">
@@ -81,17 +83,14 @@ function ArticleLanding({
           </span>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-8 flex justify-center">
+      <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-8 flex justify-center">
         <div
           className="flex flex-row flex-start w-full p-2 flex justify-center text-gray-900"
           style={{ maxWidth: "1128px" }}
         >
-          <ReadMore
-            width={34}
-            height={34}
-            href={`#${hash}`}
-            onClick={onHandleClick}
-          />
+          <div className="h-8 w-8">
+            <ReadMore href={`#${hash}`} onClick={onHandleClick} />
+          </div>
         </div>
       </div>
     </section>

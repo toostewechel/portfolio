@@ -31,7 +31,7 @@ function Header({ chapters }) {
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-10 w-full flex flex-row transition duration-300 ${
-        !isTop ? "bg-pink-100 lg:bg-transparent" : "bg-transparent"
+        !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
       <div class="mr-auto">

@@ -67,9 +67,9 @@ const wrapper = function Wrapper(props) {
 
   return (
     <>
-      <div style={{ maxWidth: "592px" }}>{h2}</div>
+      <div className="max-w-xl w-full">{h2}</div>
       <div class="flex flex-row items-start">
-        <div style={{ maxWidth: "592px" }}>{children}</div>
+        <div className="max-w-xl w-full">{children}</div>
         <SideMenu anchors={anchors} />
       </div>
     </>
@@ -88,10 +88,7 @@ function ArticleContent({ Content, id }) {
 
   return (
     <div className="bg-pink-100 p-4 flex justify-center pt-16 pb-16" ref={ref}>
-      <div
-        className="pt-8 flex flex-col items-start w-full text-gray-900 p-4"
-        style={{ maxWidth: "980px", width: "100%" }}
-      >
+      <div className="pt-4 lg:pt-8 flex flex-col items-center lg:items-start w-full text-gray-900 p-2 lg:max-w-screen-md xl:max-w-screen-lg">
         <MDXProvider
           components={{
             ...components,

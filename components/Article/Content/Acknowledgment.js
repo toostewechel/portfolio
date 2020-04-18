@@ -2,11 +2,8 @@ import React from "react";
 
 function Acknowledgement() {
   return (
-    <section className="bg-pink-100 p-4 flex justify-center pb-16">
-      <div
-        className="text-gray-900 p-4"
-        style={{ maxWidth: "980px", width: "100%" }}
-      >
+    <section className="bg-pink-100 flex justify-center p-4 pb-16">
+      <div className="text-gray-900 p-2 w-full lg:max-w-screen-md xl:max-w-screen-lg">
         <h5 className="text-normal text-gray-900 font-display font-semibold mb-2">
           Met dank aan
         </h5>
