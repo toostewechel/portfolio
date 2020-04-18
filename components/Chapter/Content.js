@@ -12,12 +12,7 @@ import { SubHeaderContext, ChapterContentContext } from "../../pages/_app";
 
 function Menu({ children }) {
   return (
-    <nav
-      class="mr-auto ml-12 text-left text-sm sticky"
-      style={{
-        top: "1rem",
-      }}
-    >
+    <nav class="mr-auto ml-12 text-left text-sm">
       <ol class="flex flex-col">{children}</ol>
     </nav>
   );
@@ -43,7 +38,12 @@ function MenuItem({ label, hash }) {
 
 function SideMenu({ anchors }) {
   return (
-    <div class="hidden lg:flex">
+    <div
+      class="hidden lg:flex sticky"
+      style={{
+        top: "1rem",
+      }}
+    >
       <Menu>
         {anchors.map((anchor) => (
           <MenuItem label={anchor} hash={slugify(anchor)} />
