@@ -44,7 +44,7 @@ export default function Index() {
             linkTo="/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg"
           ></ArticleCard>
         </main>
-        <footer className="mt-32">
+        <footer className="mt-16 md:mt-32">
           <Footer />
         </footer>
       </Layout>
