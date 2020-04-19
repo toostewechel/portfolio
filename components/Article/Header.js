@@ -34,9 +34,18 @@ function Header({ chapters }) {
         !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
-      <div class="mr-auto">
+      <div class="flex items-center mr-auto px-4 py-2 lg:px-6">
         <Link href="/">
-          <a class="flex px-4 py-2 lg:p-8">{"<-"}</a>
+          <button class="flex items-center font-body text-pink-900">
+            <svg
+              class="h-4 w-4 mr-2 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>arrow-left-1</title>
+              <path d="M3 8c0-.441.189-.861.52-1.153l7.435-6.54a1.231 1.231 0 011.626 1.848l-6.502 5.72a.167.167 0 000 .25l6.502 5.72a1.231 1.231 0 11-1.626 1.848L3.523 9.155A1.54 1.54 0 013 8z" />
+            </svg>
+            <a>Home</a>
+          </button>
         </Link>
       </div>
 
