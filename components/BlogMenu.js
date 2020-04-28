@@ -14,8 +14,11 @@ import { ChapterIntroContext } from "./Article/Context";
 
 function useMobile() {
   const mq = React.useRef(
-    typeof window !== "undefined" && window.matchMedia("(min-width: 640px)")
+    typeof window === "undefined"
+      ? { matches: false }
+      : global.matchMedia("(min-width: 640px)")
   );
+
   const [value, setValue] = React.useState(!mq.current.matches);
   React.useEffect(() => {
     const handler = () => setValue(!mq.current.matches);
@@ -70,38 +73,42 @@ function BlogMenu({ children }) {
       {({ isOpen }) => (
         <>
           <MenuButton isOpen={isOpen} />
-          {isMobile ? (
-            <ReachMenuPopover
-              portal={false}
-              className="fixed top-0 right-0 bottom-0 left-0 bg-white pt-12"
-            >
-              <div className="p-4">
-                <ReachMenuItems>{items}</ReachMenuItems>
-              </div>
-            </ReachMenuPopover>
-          ) : (
-            <ReachMenuPopover
-              portal={false}
-              style={{
-                right: "1.5rem",
-              }}
-            >
-              <div
-                className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
-                style={{
-                  transform: "translate3d(36%, -58%, 0)",
-                  width: 1024,
-                  height: 1024,
-                }}
-              />
+          {process.browser ? (
+            <>
+              {isMobile ? (
+                <ReachMenuPopover
+                  portal={false}
+                  className="fixed top-0 right-0 bottom-0 left-0 bg-white pt-12"
+                >
+                  <div className="p-4">
+                    <ReachMenuItems>{items}</ReachMenuItems>
+                  </div>
+                </ReachMenuPopover>
+              ) : (
+                <ReachMenuPopover
+                  portal={false}
+                  style={{
+                    right: "1.5rem",
+                  }}
+                >
+                  <div
+                    className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
+                    style={{
+                      transform: "translate3d(36%, -58%, 0)",
+                      width: 1024,
+                      height: 1024,
+                    }}
+                  />
 
-              <div className="w-full relative" style={{ width: 524 }}>
-                <div className="relative right-0 mt-4">
-                  <ReachMenuItems>{items}</ReachMenuItems>
-                </div>
-              </div>
-            </ReachMenuPopover>
-          )}
+                  <div className="w-full relative" style={{ width: 524 }}>
+                    <div className="relative right-0 mt-4">
+                      <ReachMenuItems>{items}</ReachMenuItems>
+                    </div>
+                  </div>
+                </ReachMenuPopover>
+              )}
+            </>
+          ) : null}
         </>
       )}
     </ReachMenu>
