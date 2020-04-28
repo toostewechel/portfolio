@@ -34,9 +34,9 @@ function Header({ chapters }) {
         !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
-      <div className="z-10 flex items-center mr-auto px-4 py-2 lg:px-6">
+      <div className="z-10 flex items-center mr-auto px-2 py-2 lg:px-6">
         <Link href="/">
-          <button className="flex items-center font-body text-pink-900">
+          <button className="flex items-center font-body text-pink-900 p-2">
             <svg
               aria-hidden
               className="h-4 w-4 mr-2 fill-current"
@@ -50,7 +50,7 @@ function Header({ chapters }) {
         </Link>
       </div>
 
-      <nav className="ml-auto px-4 py-2 lg:p-8">
+      <nav className="flex justify-center ml-auto px-4 py-2 lg:p-8">
         <BlogMenu>
           {chapters.map((chapter) => {
             const slug = slugify(chapter);
