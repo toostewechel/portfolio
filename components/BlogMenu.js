@@ -20,11 +20,15 @@ function useMobile() {
   );
 
   const [value, setValue] = React.useState(!mq.current.matches);
+
   React.useEffect(() => {
     const handler = () => setValue(!mq.current.matches);
+
     mq.current.addListener(handler);
+
     return () => mq.current.removeListener(handler);
   }, []);
+
   return value;
 }
 
