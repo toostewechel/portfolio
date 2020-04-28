@@ -44,5 +44,6 @@
 /* pseudo pseudo selector */
 [data-reach-menu-item][data-selected] {
   outline: none;
+  text-decoration: underline;
 }
 /* purgecss end ignore */
