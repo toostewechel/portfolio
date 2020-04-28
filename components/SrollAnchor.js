@@ -1,5 +1,25 @@
 import * as React from "react";
 
+function useReducedMotionPrefered() {
+  const mq = React.useRef(
+    typeof window === "undefined"
+      ? { matches: false }
+      : global.matchMedia("(prefers-reduced-motion)")
+  );
+
+  const [value, setValue] = React.useState(mq.current.matches);
+
+  React.useEffect(() => {
+    const handler = () => setValue(mq.current.matches);
+
+    mq.current.addListener(handler);
+
+    return () => mq.current.removeListener(handler);
+  }, []);
+
+  return value;
+}
+
 const createScrollAnchorContext = (name, initialValue = {}) => {
   const Ctx = React.createContext(initialValue);
   Ctx.displayName = name;
@@ -113,6 +133,8 @@ const useScrollManager = (hash, Ctx) => {
 
   const isActive = hash === activeAnchor;
 
+  const preferReducedMotion = useReducedMotionPrefered();
+
   const goTo = (event) => {
     if (anchors[hash].offsetTop != null) {
       if (event) {
@@ -120,7 +142,7 @@ const useScrollManager = (hash, Ctx) => {
       }
 
       window.scroll({
-        behavior: "smooth",
+        behavior: preferReducedMotion ? "auto" : "smooth",
         top: anchors[hash].offsetTop,
         block: "start",
       });
