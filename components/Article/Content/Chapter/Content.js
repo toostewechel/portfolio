@@ -52,7 +52,7 @@ function SideMenu({ anchors }) {
         {anchors.map((anchor) => {
           const slug = slugify(anchor);
 
-          returnn(<MenuItem key={slug} label={anchor} hash={slug} />);
+          return <MenuItem key={slug} label={anchor} hash={slug} />;
         })}
       </Menu>
     </div>
