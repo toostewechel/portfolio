@@ -12,6 +12,19 @@ import { useScrollManager } from "../components/SrollAnchor";
 
 import { ChapterIntroContext } from "./Article/Context";
 
+function useMobile() {
+  const mq = React.useRef(
+    typeof window !== "undefined" && window.matchMedia("(min-width: 640px)")
+  );
+  const [value, setValue] = React.useState(!mq.current.matches);
+  React.useEffect(() => {
+    const handler = () => setValue(!mq.current.matches);
+    mq.current.addListener(handler);
+    return () => mq.current.removeListener(handler);
+  }, []);
+  return value;
+}
+
 function Icon({ isOpen }) {
   return (
     <svg
@@ -47,6 +60,7 @@ function MenuButton({ isOpen }) {
 }
 
 function BlogMenu({ children }) {
+  const isMobile = useMobile();
   const items = React.Children.toArray(children).filter(
     (item) => item.type == BlogMenu.Item
   );
@@ -56,27 +70,38 @@ function BlogMenu({ children }) {
       {({ isOpen }) => (
         <>
           <MenuButton isOpen={isOpen} />
-          <ReachMenuPopover
-            portal={false}
-            style={{
-              right: "2rem",
-            }}
-          >
-            <div
-              className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
-              style={{
-                transform: "translate3d(36%, -58%, 0)",
-                width: 1024,
-                height: 1024,
-              }}
-            />
-
-            <div className="w-full relative" style={{ width: 524 }}>
-              <div className="relative right-0 mt-4">
+          {isMobile ? (
+            <ReachMenuPopover
+              portal={false}
+              className="fixed top-0 right-0 bottom-0 left-0 bg-white pt-12"
+            >
+              <div className="p-4">
                 <ReachMenuItems>{items}</ReachMenuItems>
               </div>
-            </div>
-          </ReachMenuPopover>
+            </ReachMenuPopover>
+          ) : (
+            <ReachMenuPopover
+              portal={false}
+              style={{
+                right: "1.5rem",
+              }}
+            >
+              <div
+                className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
+                style={{
+                  transform: "translate3d(36%, -58%, 0)",
+                  width: 1024,
+                  height: 1024,
+                }}
+              />
+
+              <div className="w-full relative" style={{ width: 524 }}>
+                <div className="relative right-0 mt-4">
+                  <ReachMenuItems>{items}</ReachMenuItems>
+                </div>
+              </div>
+            </ReachMenuPopover>
+          )}
         </>
       )}
     </ReachMenu>
@@ -91,7 +116,7 @@ BlogMenu.Item = function ({ slug, title }) {
       as="a"
       href={`#${slug}`}
       onSelect={onHandleClick}
-      className="text-pink-900 text-right text-base p-2 pr-0 hover:underline"
+      className="text-pink-900 text-left sm:text-right text-base p-2 hover:underline"
     >
       {title}
     </ReachMenuItem>

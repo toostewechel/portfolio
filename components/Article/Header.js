@@ -34,7 +34,7 @@ function Header({ chapters }) {
         !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
-      <div class="flex items-center mr-auto px-4 py-2 lg:px-6">
+      <div class="z-10 flex items-center mr-auto px-4 py-2 lg:px-6">
         <Link href="/">
           <button class="flex items-center font-body text-pink-900">
             <svg

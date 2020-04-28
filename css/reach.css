@@ -24,7 +24,6 @@
 [data-reach-menu-list],
 [data-reach-menu-items] {
   display: block;
-  white-space: nowrap;
   outline: none;
 }
 
