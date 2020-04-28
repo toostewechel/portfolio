@@ -12,8 +12,8 @@ import { SubHeaderContext, ChapterContentContext } from "../../Context";
 
 function Menu({ children }) {
   return (
-    <nav class="mr-auto ml-12 text-left text-sm">
-      <ol class="flex flex-col">{children}</ol>
+    <nav className="mr-auto ml-12 text-left text-sm">
+      <ol className="flex flex-col">{children}</ol>
     </nav>
   );
 }
@@ -23,13 +23,17 @@ function MenuItem({ label, hash }) {
 
   return (
     <li
-      class={`flex border-l-4 ${
+      className={`flex border-l-4 ${
         isActive
           ? "border-pink-500 text-pink-900"
           : "border-pink-300 hover:border-pink-500 text-pink-700 hover:text-pink-900"
       }`}
     >
-      <a href={`#${hash}`} class="pl-3 p-1 font-medium" onClick={onHandleClick}>
+      <a
+        href={`#${hash}`}
+        className="pl-3 p-1 font-medium"
+        onClick={onHandleClick}
+      >
         {label}
       </a>
     </li>
@@ -39,7 +43,7 @@ function MenuItem({ label, hash }) {
 function SideMenu({ anchors }) {
   return (
     <div
-      class="hidden lg:flex sticky"
+      className="hidden lg:flex sticky"
       style={{
         top: "1rem",
       }}
@@ -68,7 +72,7 @@ const wrapper = function Wrapper(props) {
   return (
     <>
       <div className="max-w-xl w-full">{h2}</div>
-      <div class="flex flex-row items-start">
+      <div className="flex flex-row items-start">
         <div className="max-w-xl w-full">{children}</div>
         <SideMenu anchors={anchors} />
       </div>

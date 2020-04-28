@@ -9,7 +9,7 @@ import Link from "next/link";
 function Header({ chapters }) {
   const [isTop, setIsTop] = React.useState(true);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (window.scrollY !== 0) {
       setIsTop(false);
     }
@@ -34,11 +34,11 @@ function Header({ chapters }) {
         !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
-      <div class="z-10 flex items-center mr-auto px-4 py-2 lg:px-6">
+      <div className="z-10 flex items-center mr-auto px-4 py-2 lg:px-6">
         <Link href="/">
-          <button class="flex items-center font-body text-pink-900">
+          <button className="flex items-center font-body text-pink-900">
             <svg
-              class="h-4 w-4 mr-2 fill-current"
+              className="h-4 w-4 mr-2 fill-current"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>arrow-left-1</title>
@@ -49,7 +49,7 @@ function Header({ chapters }) {
         </Link>
       </div>
 
-      <nav class="ml-auto px-4 py-2 lg:p-8">
+      <nav className="ml-auto px-4 py-2 lg:p-8">
         <BlogMenu>
           {chapters.map((chapter) => {
             const slug = slugify(chapter);
