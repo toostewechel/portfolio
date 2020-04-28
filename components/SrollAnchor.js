@@ -67,7 +67,7 @@ function ScrollAnchorProvider({ children, Ctx }) {
 
   React.useEffect(() => {
     observer.current = new IntersectionObserver(onHandleObserver, {
-      rootMargin: "0px 0px -100%",
+      rootMargin: "0px 0px -80%",
     });
 
     return () => {
