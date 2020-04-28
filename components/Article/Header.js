@@ -38,10 +38,11 @@ function Header({ chapters }) {
         <Link href="/">
           <button className="flex items-center font-body text-pink-900">
             <svg
+              aria-hidden
               className="h-4 w-4 mr-2 fill-current"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>arrow-left-1</title>
+              <title>Terug</title>
               <path d="M3 8c0-.441.189-.861.52-1.153l7.435-6.54a1.231 1.231 0 011.626 1.848l-6.502 5.72a.167.167 0 000 .25l6.502 5.72a1.231 1.231 0 11-1.626 1.848L3.523 9.155A1.54 1.54 0 013 8z" />
             </svg>
             <a>Home</a>
