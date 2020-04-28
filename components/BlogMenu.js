@@ -105,7 +105,7 @@ function BlogMenu({ children }) {
                   />
 
                   <div className="w-full relative" style={{ width: 524 }}>
-                    <div className="relative right-0 mt-4">
+                    <div className="relative right-0 mt-12">
                       <ReachMenuItems>{items}</ReachMenuItems>
                     </div>
                   </div>
