@@ -115,6 +115,7 @@ BlogMenu.Item = function ({ slug, title }) {
     <ReachMenuItem
       as="a"
       href={`#${slug}`}
+      onClick={onHandleClick}
       onSelect={onHandleClick}
       className="text-pink-900 text-left sm:text-right text-base p-2 hover:underline"
     >
