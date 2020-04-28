@@ -49,9 +49,11 @@ function SideMenu({ anchors }) {
       }}
     >
       <Menu>
-        {anchors.map((anchor) => (
-          <MenuItem label={anchor} hash={slugify(anchor)} />
-        ))}
+        {anchors.map((anchor) => {
+          const slug = slugify(anchor);
+
+          returnn(<MenuItem key={slug} label={anchor} hash={slug} />);
+        })}
       </Menu>
     </div>
   );
