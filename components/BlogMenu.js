@@ -73,7 +73,7 @@ function BlogMenu({ children }) {
       {({ isOpen }) => (
         <>
           <MenuButton isOpen={isOpen} />
-          {process.browser ? (
+          {isOpen ? (
             <>
               {isMobile ? (
                 <ReachMenuPopover
