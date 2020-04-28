@@ -30,11 +30,11 @@ function Header({ chapters }) {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-10 w-full flex flex-row transition duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-10 w-full flex flex-row transition duration-300 pointer-events-none ${
         !isTop ? "bg-pink-100 md:bg-transparent" : "bg-transparent"
       }`}
     >
-      <div className="z-10 flex items-center mr-auto px-2 py-2 lg:px-6">
+      <div className="z-10 flex items-center mr-auto px-2 py-2 lg:px-6 pointer-events-auto">
         <Link href="/">
           <button className="flex items-center font-body text-pink-900 p-2">
             <svg
@@ -50,7 +50,7 @@ function Header({ chapters }) {
         </Link>
       </div>
 
-      <nav className="flex justify-center ml-auto px-4 py-2 lg:p-8">
+      <nav className="flex justify-center ml-auto px-4 py-2 lg:p-8 pointer-events-auto">
         <BlogMenu>
           {chapters.map((chapter) => {
             const slug = slugify(chapter);
