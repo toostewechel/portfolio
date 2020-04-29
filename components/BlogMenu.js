@@ -84,9 +84,11 @@ function BlogMenu({ children }) {
                   portal={false}
                   className="fixed top-0 right-0 bottom-0 left-0 bg-white pt-12"
                 >
-                  <div className="p-4">
-                    <ReachMenuItems>{items}</ReachMenuItems>
-                  </div>
+                  {isOpen ? (
+                    <div className="p-4">
+                      <ReachMenuItems>{items}</ReachMenuItems>
+                    </div>
+                  ) : null}
                 </ReachMenuPopover>
               ) : (
                 <ReachMenuPopover
@@ -112,7 +114,11 @@ function BlogMenu({ children }) {
                 </ReachMenuPopover>
               )}
             </>
-          ) : null}
+          ) : (
+            <ReachMenuPopover>
+              <ReachMenuItems>{items}</ReachMenuItems>
+            </ReachMenuPopover>
+          )}
         </>
       )}
     </ReachMenu>
