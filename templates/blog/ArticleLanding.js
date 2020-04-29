@@ -18,6 +18,8 @@ import {
   ChapterContentContext,
 } from "../../components/Article/Context";
 
+import AvatarTom from "../../images/avatar-tom.png";
+
 function ArticleLanding({
   id,
   backgroundColor,
@@ -60,11 +62,7 @@ function ArticleLanding({
           </div>
           <span className="mt-6">
             <div className="flex flex-row text-gray-900">
-              <img
-                alt="avatar"
-                className="w-10 h-10 mr-2"
-                src="/images/avatar-tom.png"
-              />
+              <img alt="avatar" className="w-10 h-10 mr-2" src={AvatarTom} />
               <div className="flex-col self-center">
                 <p className="text-body font-semibold text-sm not-italic">
                   Tom Oostewechel

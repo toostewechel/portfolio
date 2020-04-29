@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import { useLogPageVisit } from "../components/googleAnalytics";
 
+import FeatureArticleToegankelijkeDienstverlening from "../images/featured-article-toegankelijke-dienstverlening.png";
+
 export default function Index() {
   useLogPageVisit();
 
@@ -40,7 +42,7 @@ export default function Index() {
           <ArticleCard
             datePublished="20 jan 2020"
             duration="15 min"
-            src="/images/featured-article-blog.png"
+            src={FeatureArticleToegankelijkeDienstverlening}
             articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
             articleContent="In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
             title="Lees artikel"

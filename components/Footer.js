@@ -1,3 +1,7 @@
+import LinkedIN from "../images/linkedin-logo.png";
+import MediumLogo from "../images/medium-logo.png";
+import GithubLogo from "../images/github-logo.png";
+
 function Footer() {
   return (
     <footer className="flex flex-col md:flex-row font-body">
@@ -23,7 +27,7 @@ function Footer() {
           >
             <img
               aria-hidden="true"
-              src="/images/linkedin-logo.png"
+              src={LinkedIN}
               className="h-6 w-6"
               alt="LinkedIN"
             ></img>
@@ -43,7 +47,7 @@ function Footer() {
           >
             <img
               aria-hidden="true"
-              src="/images/medium-logo.png"
+              src={MediumLogo}
               className="h-6 w-6"
               alt="Medium"
             ></img>
@@ -63,7 +67,7 @@ function Footer() {
           >
             <img
               aria-hidden="true"
-              src="/images/github-logo.png"
+              src={GithubLogo}
               className="h-6 w-6"
               alt="Github"
             ></img>
