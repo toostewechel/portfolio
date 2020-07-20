@@ -27,6 +27,9 @@ import Conclusion from "../content/Conclusion.mdx";
 //Import GA-wrapper
 import { useLogPageVisit } from "../components/googleAnalytics";
 
+//Import Featured Image
+import FeaturedImageToegankelijkheid from "../images/featured-image-toegankelijkheid.png";
+
 const CHAPTERS = [
   "Toegankelijke online dienstverlening ontwerpen in de zorg",
   "Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief",
@@ -47,6 +50,19 @@ function Page() {
         <meta
           name="description"
           content="Toegankelijke online dienstverlening ontwerpen in de zorg"
+        />
+        <meta
+          property="og:title"
+          content="Toegankelijke online dienstverlening ontwerpen in de zorg"
+        />
+        <meta property="og:image" content={FeaturedImageToegankelijkheid} />
+        <meta
+          property="og:description"
+          content="In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
+        />
+        <meta
+          property="og:url"
+          content="https://snapshots.design/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg/"
         />
         <title>Toegankelijke online dienstverlening ontwerpen in de zorg</title>
       </Head>

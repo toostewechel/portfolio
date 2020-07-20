@@ -74,9 +74,9 @@ const wrapper = function Wrapper(props) {
   return (
     <>
       <div className="max-w-xl w-full">{h2}</div>
-      <div className="flex flex-row items-start">
-        <div className="max-w-xl w-full">{children}</div>
+      <div className="flex flex-row-reverse items-start">
         <SideMenu anchors={anchors} />
+        <div className="max-w-xl w-full">{children}</div>
       </div>
     </>
   );
