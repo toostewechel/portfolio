@@ -2,33 +2,33 @@
 import * as React from "react";
 
 //Import Scroll
-import slugify from "../utils/slugify";
+import slugify from "../../../utils/slugify";
 
 import Head from "next/head";
 
 //Import Blog Templates
-import ArticleLanding from "../templates/blog/ArticleLanding";
-import Article from "../components/Article";
+import ArticleLanding from "../../../templates/blog/ArticleLanding";
+import Article from "../../../components/Article";
 
 //Import Blog Illustrations
-import ILLUSTRATION_1 from "../illustrations/1.svg";
-import ILLUSTRATION_2 from "../illustrations/2.svg";
-import ILLUSTRATION_4 from "../illustrations/4.svg";
-import ILLUSTRATION_5 from "../illustrations/5.svg";
-import ILLUSTRATION_6 from "../illustrations/6.svg";
+import ILLUSTRATION_1 from "../../../illustrations/1.svg";
+import ILLUSTRATION_2 from "../../../illustrations/2.svg";
+import ILLUSTRATION_4 from "../../../illustrations/4.svg";
+import ILLUSTRATION_5 from "../../../illustrations/5.svg";
+import ILLUSTRATION_6 from "../../../illustrations/6.svg";
 
 //Import Blog Content
-import Chapter1 from "../content/Chapter1.mdx";
-import Chapter2 from "../content/Chapter2.mdx";
-import Chapter3 from "../content/Chapter3.mdx";
-import Chapter4 from "../content/Chapter4.mdx";
-import Conclusion from "../content/Conclusion.mdx";
+import Chapter1 from "../../../content/Chapter1.mdx";
+import Chapter2 from "../../../content/Chapter2.mdx";
+import Chapter3 from "../../../content/Chapter3.mdx";
+import Chapter4 from "../../../content/Chapter4.mdx";
+import Conclusion from "../../../content/Conclusion.mdx";
 
 //Import GA-wrapper
-import { useLogPageVisit } from "../components/googleAnalytics";
+import { useLogPageVisit } from "../../../components/googleAnalytics";
 
 //Import Featured Image
-import FeaturedImageToegankelijkheid from "../images/featured-image-toegankelijkheid.png";
+import FeaturedImageToegankelijkheid from "../../../images/featured-image-toegankelijkheid.png";
 
 const CHAPTERS = [
   "Toegankelijke online dienstverlening ontwerpen in de zorg",
