@@ -18,11 +18,11 @@ import ILLUSTRATION_5 from "../../../illustrations/5.svg";
 import ILLUSTRATION_6 from "../../../illustrations/6.svg";
 
 //Import Blog Content
-import Chapter1 from "../../../content/Chapter1.mdx";
-import Chapter2 from "../../../content/Chapter2.mdx";
-import Chapter3 from "../../../content/Chapter3.mdx";
-import Chapter4 from "../../../content/Chapter4.mdx";
-import Conclusion from "../../../content/Conclusion.mdx";
+import Chapter1 from "../../../content/toegankelijke-online-dienstverlening/Chapter1.mdx";
+import Chapter2 from "../../../content/toegankelijke-online-dienstverlening/Chapter2.mdx";
+import Chapter3 from "../../../content/toegankelijke-online-dienstverlening/Chapter3.mdx";
+import Chapter4 from "../../../content/toegankelijke-online-dienstverlening/Chapter4.mdx";
+import Conclusion from "../../../content/toegankelijke-online-dienstverlening/Conclusion.mdx";
 
 //Import GA-wrapper
 import { useLogPageVisit } from "../../../components/googleAnalytics";
