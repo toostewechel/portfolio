@@ -37,18 +37,7 @@ export default function Index() {
               gerelateerde onderwerpen.
             </p>
           </div>
-          <h2 className="font-display text-3xl font-medium mt-8 mb-8">
-            Case study
-          </h2>
-          <ArticleCard
-            datePublished="1 aug 2020"
-            duration="8 min"
-            src={FeatureArticleProgramBuilder}
-            articleTitle="Gestandaardiseerde e-health content ontwikkelen"
-            articleContent="Deze case study beschrijft op welke manier Jouw Omgeving de ontwikkeling van e-health content gestandaardiseerd heeft."
-            title="Lees case study"
-            linkTo="/case-study/gestandaardiseerd-ehealth-content-ontwikkelen"
-          ></ArticleCard>
+           
           <h2 className="font-display text-3xl font-medium mt-8 mb-8">
             Artikelen
           </h2>
