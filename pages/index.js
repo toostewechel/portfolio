@@ -6,7 +6,7 @@ import Head from "next/head";
 import { useLogPageVisit } from "../components/googleAnalytics";
 
 import FeatureArticleToegankelijkeDienstverlening from "../images/featured-article-toegankelijke-dienstverlening.png";
-import FeatureArticleOostzOntwerp from "../images/featured-article-oostz-ontwerp.png";
+import FeatureArticleProgramBuilder from "../images/featured-article-program-builder.png";
 
 export default function Index() {
   useLogPageVisit();
@@ -37,18 +37,7 @@ export default function Index() {
               gerelateerde onderwerpen.
             </p>
           </div>
-          <h2 className="font-display text-3xl font-medium mt-8 mb-8">
-            Projecten
-          </h2>
-          <ArticleCard
-            datePublished="1 aug 2020"
-            duration="8 min"
-            src={FeatureArticleOostzOntwerp}
-            articleTitle="Oostz Ontwerp"
-            articleContent="In dit project heb ik de complete huisttijl van Oostz Ontwerp ontworpen en ontwikkelde ik de website. In dit artikel beschrijf ik mijn ontwerpproces."
-            title="Lees artikel"
-            linkTo="/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg"
-          ></ArticleCard>
+           
           <h2 className="font-display text-3xl font-medium mt-8 mb-8">
             Artikelen
           </h2>
@@ -59,7 +48,7 @@ export default function Index() {
             articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
             articleContent="In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
             title="Lees artikel"
-            linkTo="/toegankelijke-online-dienstverlening-ontwerpen-in-de-zorg"
+            linkTo="/articles/toegankelijke-online-dienstverlening"
           ></ArticleCard>
         </main>
         <footer className="mt-16 md:mt-32">
