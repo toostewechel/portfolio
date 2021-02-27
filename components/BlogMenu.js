@@ -98,7 +98,7 @@ function BlogMenu({ children }) {
                   }}
                 >
                   <div
-                    className="rounded-full bg-transparent border-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
+                    className="rounded-full bg-transparent p-0 mt-0 border-transparent absolute top-0 right-0 bottom-0 block bg-pink-100"
                     style={{
                       transform: "translate3d(36%, -58%, 0)",
                       width: 1024,
