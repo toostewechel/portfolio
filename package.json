@@ -13,11 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^4.0.2",
     "@mdx-js/loader": "^1.6.13",
-    "@next/mdx": "^9.4.4",
-    "@reach/menu-button": "^0.9.1",
-    "@reach/visually-hidden": "^0.9.0",
+    "@next/mdx": "^10.0.7",
+    "@reach/menu-button": "^0.13.2",
+    "@reach/visually-hidden": "^0.13.2",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
     "next": "^9.4.4",
@@ -30,7 +30,6 @@
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",

@@ -11,11 +11,11 @@ import ArticleLanding from "../../../templates/blog/ArticleLanding";
 import Article from "../../../components/Article";
 
 //Import Blog Illustrations
-import ILLUSTRATION_1 from "../../../illustrations/1.svg";
-import ILLUSTRATION_2 from "../../../illustrations/2.svg";
-import ILLUSTRATION_4 from "../../../illustrations/4.svg";
-import ILLUSTRATION_5 from "../../../illustrations/5.svg";
-import ILLUSTRATION_6 from "../../../illustrations/6.svg";
+import ILLUSTRATION_1 from "../../../illustrations/toegankelijke-online-dienstverlening/1.svg";
+import ILLUSTRATION_2 from "../../../illustrations/toegankelijke-online-dienstverlening/2.svg";
+import ILLUSTRATION_4 from "../../../illustrations/toegankelijke-online-dienstverlening/4.svg";
+import ILLUSTRATION_5 from "../../../illustrations/toegankelijke-online-dienstverlening/5.svg";
+import ILLUSTRATION_6 from "../../../illustrations/toegankelijke-online-dienstverlening/6.svg";
 
 //Import Blog Content
 import Chapter1 from "../../../content/toegankelijke-online-dienstverlening/Chapter1.mdx";
