@@ -1,10 +1,10 @@
 import Skill from "./Skill";
 
-import AvatarTom from "../../images/avatar-tom-real.png";
-import GitHub from "../../images/icons/github.svg";
-import LinkedIn from "../../images/icons/linkedin.svg";
-import Vector from "../../images/icons/vector.svg";
-import Courses from "../../images/icons/courses.svg";
+import AvatarTom from "../../assets/avatars/avatar-tom-real.png";
+import GitHub from "../../assets/icons/github.svg";
+import LinkedIn from "../../assets/icons/linkedin.svg";
+import Vector from "../../assets/icons/vector.svg";
+import Courses from "../../assets/icons/courses.svg";
 
 const wrapper = {
   padding: "20px",

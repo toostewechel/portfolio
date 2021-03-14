@@ -30,7 +30,7 @@ export default function Index() {
                   </h1>
                   <p
                     style={{ maxWidth: "460px" }}
-                    className="font-body font-normal text-base leading-relaxed text-white opacity-75 mb-6"
+                    className="font-body text-lg font-normal leading-relaxed text-gray-400  mb-6"
                   >
                     In my work I untangle complexity in a structured, creative
                     and visual way and translate problems into sustainable and
@@ -41,7 +41,7 @@ export default function Index() {
                     <a
                       href="#"
                       style={{
-                        background: "#00CFFD",
+                        border: "1px solid #00CFFD",
                       }}
                       className="font-display font-semibold pl-6 pt-3 pb-3 pr-6 rounded text-display text-white text-sm"
                     >
@@ -55,12 +55,13 @@ export default function Index() {
               </div>
             </section>
             <section className="mb-48">
-              <h2 className="font-display font-bold text-3xl leading-tight tracking-normal text-white mb-6">
+              <h2 className="font-display font-bold text-3xl leading-tight tracking-normal text-white mb-4">
                 Snapshots
               </h2>
               <p
                 style={{ maxWidth: "320px" }}
-                className="font-body font-normal text-base leading-relaxed text-white opacity-75 mb-6"
+                className="font-body text-lg font-normal leading-relaxed text-gray-400  
+                mb-12"
               >
                 A snapshot of my professional and personal work projects.
               </p>

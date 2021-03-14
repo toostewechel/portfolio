@@ -1,4 +1,4 @@
-import Logo from "../../images/snapshots-logo.svg";
+import Logo from "../../assets/logos/snapshots-logo.svg";
 
 function Header() {
   return (
