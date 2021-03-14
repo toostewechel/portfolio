@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ["Playfair Display", "serif"],
-      body: ["Raleway", "sans-serif"],
+      display: ["Poppins", "sans-serif"],
+      body: ["Open Sans", "sans-serif"],
     },
   },
 };

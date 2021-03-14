@@ -1,60 +1,76 @@
-import Header from "../components/Header";
-import Layout from "../components/Layout";
-import ArticleCard from "../components/ArticleCard";
-import Footer from "../components/Footer";
+import Header from "../components/Layout/Header";
+import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import { useLogPageVisit } from "../components/googleAnalytics";
-
-import FeatureArticleToegankelijkeDienstverlening from "../images/featured-article-toegankelijke-dienstverlening.png";
-import FeatureArticleProgramBuilder from "../images/featured-article-program-builder.png";
+import ProfileCard from "../components/Profile/ProfileCard";
+import Projects from "../components/Projects/Projects";
 
 export default function Index() {
   useLogPageVisit();
 
   return (
-    <div>
-      <Head>
-        <meta name="description" content="Portfolio - Tom Oostewechel" />
-        <title>Portfolio - Tom Oostewechel</title>
-      </Head>
-      <Layout>
-        <Header />
-        <main>
-          <div className="mt-16 mb-16">
-            <h1 className="font-display font-black text-5xl text-gray-900 mb-8 md:mb-4 leading-tight">
-              Ik ontwerp{" "}
-              <span className="hover:text-pink-700 leading-tight">
-                digitale
-              </span>{" "}
-              producten<span className="text-pink-700">.</span>
-            </h1>
-            <p className="font-body text-gray-700">
-              Ik ben Tom Oostewechel, productontwerper bij Jouw Omgeving in
-              Utrecht. Ik maak complexe vraagstukken op een creatieve en visuele
-              wijze inzichtelijk en combineer kennis uit verschillende domeinen
-              en vertaal deze naar duurzame en gebruiksvriendelijke oplossingen.
-              Op deze site schrijf ik over projecten, het ontwerpproces en
-              gerelateerde onderwerpen.
-            </p>
-          </div>
-           
-          <h2 className="font-display text-3xl font-medium mt-8 mb-8">
-            Artikelen
-          </h2>
-          <ArticleCard
-            datePublished="20 jan 2020"
-            duration="15 min"
-            src={FeatureArticleToegankelijkeDienstverlening}
-            articleTitle="Toegankelijke online dienstverlening ontwerpen in de zorg"
-            articleContent="In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
-            title="Lees artikel"
-            linkTo="/articles/toegankelijke-online-dienstverlening"
-          ></ArticleCard>
-        </main>
-        <footer className="mt-16 md:mt-32">
-          <Footer />
-        </footer>
-      </Layout>
-    </div>
+    <body style={{ backgroundColor: "#1F1F47", height: "100vh" }}>
+      <div>
+        <Head>
+          <meta name="description" content="Portfolio - Tom Oostewechel" />
+          <title>Portfolio - Tom Oostewechel</title>
+        </Head>
+        <Layout>
+          <Header />
+          <main>
+            <section className="mt-48 mb-48">
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col gap-6 w-full md:w-1/2">
+                  <h4 className="font-display font-light text-sm uppercase tracking-widest text-white opacity-75">
+                    Snapshots
+                  </h4>
+                  <h1 className="font-display font-bold text-5xl leading-tight tracking-normal text-white">
+                    I Design and Build Digital{" "}
+                    <span style={{ color: "#00CFFD" }}>Products.</span>
+                  </h1>
+                  <p
+                    style={{ maxWidth: "460px" }}
+                    className="font-body font-normal text-base leading-relaxed text-white opacity-75 mb-6"
+                  >
+                    In my work I untangle complexity in a structured, creative
+                    and visual way and translate problems into sustainable and
+                    user friendly solutions through combining knowledge and
+                    skills from different domains.
+                  </p>
+                  <div>
+                    <a
+                      href="#"
+                      style={{
+                        background: "#00CFFD",
+                      }}
+                      className="font-display font-semibold pl-6 pt-3 pb-3 pr-6 rounded text-display text-white text-sm"
+                    >
+                      About me
+                    </a>
+                  </div>
+                </div>
+                <div className="hidden md:flex md:self-center md:justify-end md:w-1/2">
+                  <ProfileCard />
+                </div>
+              </div>
+            </section>
+            <section className="mb-48">
+              <h2 className="font-display font-bold text-3xl leading-tight tracking-normal text-white mb-6">
+                Snapshots
+              </h2>
+              <p
+                style={{ maxWidth: "320px" }}
+                className="font-body font-normal text-base leading-relaxed text-white opacity-75 mb-6"
+              >
+                A snapshot of my professional and personal work projects.
+              </p>
+              <div>
+                <Projects />
+              </div>
+            </section>
+          </main>
+        </Layout>
+      </div>
+    </body>
   );
 }
