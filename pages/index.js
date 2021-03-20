@@ -9,7 +9,7 @@ export default function Index() {
   useLogPageVisit();
 
   return (
-    <body style={{ backgroundColor: "#1F1F47", height: "100vh" }}>
+    <body style={{ backgroundColor: "#1F1F47" }}>
       <div>
         <Head>
           <meta name="description" content="Portfolio - Tom Oostewechel" />
@@ -25,17 +25,17 @@ export default function Index() {
                     Snapshots
                   </h4>
                   <h1 className="font-display font-bold text-5xl leading-tight tracking-normal text-white">
-                    I Design and Build Digital{" "}
-                    <span style={{ color: "#00CFFD" }}>Products.</span>
+                    Ik ontwerp en bouw digitale{" "}
+                    <span className="gradient-text">producten.</span>
                   </h1>
                   <p
                     style={{ maxWidth: "460px" }}
                     className="font-body text-lg font-normal leading-relaxed text-gray-400  mb-6"
                   >
-                    In my work I untangle complexity in a structured, creative
-                    and visual way and translate problems into sustainable and
-                    user friendly solutions through combining knowledge and
-                    skills from different domains.
+                    Ik maak complexe vraagstukken op een creatieve en visuele
+                    wijze inzichtelijk en combineer kennis uit verschillende
+                    domeinen en vertaal deze naar duurzame en
+                    gebruiksvriendelijke oplossingen.
                   </p>
                   <div>
                     <a
@@ -45,7 +45,7 @@ export default function Index() {
                       }}
                       className="font-display font-semibold pl-6 pt-3 pb-3 pr-6 rounded text-display text-white text-sm"
                     >
-                      About me
+                      Over mij
                     </a>
                   </div>
                 </div>
@@ -63,7 +63,8 @@ export default function Index() {
                 className="font-body text-lg font-normal leading-relaxed text-gray-400  
                 mb-12"
               >
-                A snapshot of my professional and personal work projects.
+                Een verzameling van mijn professionele en persoonlijke
+                projecten.
               </p>
               <div>
                 <Projects />

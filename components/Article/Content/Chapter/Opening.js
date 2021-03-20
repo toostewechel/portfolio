@@ -38,11 +38,11 @@ function Opening({
           />
         </div>
         <div className="md:row-start-2 md:row-end-6 md:col-start-1 md:col-end-7 md:flex md:flex-col justify-center">
-          <div className="lg:pr-8 text-lg leading-relaxed text-gray-900 tracking-wide">
-            <h1 className="font-display font-extrabold text-2xl lg:text-3xl mb-4 text-gray-900">
+          <div className="lg:pr-8">
+            <h1 className="font-display font-bold text-2xl leading-tight lg:text-3xl mb-4 text-gray-900">
               {props.title}
             </h1>
-            <p className="font-body text-base lg:text-lg mb-4">
+            <p className="font-body text-base leading-relaxed text-gray-900 lg:text-lg mb-4">
               {props.content}
             </p>
           </div>
@@ -50,7 +50,7 @@ function Opening({
             <a
               href={`#${hash}`}
               onClick={onHandleClick}
-              className="px-4 py-2 rounded-full bg-pink-700 text-white"
+              className="px-4 py-2 rounded bg-pink-700 text-white"
             >
               {label}
             </a>

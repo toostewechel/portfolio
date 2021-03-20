@@ -2,7 +2,7 @@ import * as React from "react";
 
 function Heading1(props) {
   return (
-    <h1 className="font-display font-normal text-3xl mb-4 text-gray-900">
+    <h1 className="font-display font-normal text-4xl mb-4 text-gray-900">
       {props.children}
     </h1>
   );
@@ -12,7 +12,7 @@ export const h1 = Heading1;
 
 function Heading2(props) {
   return (
-    <h2 className="font-display font-extrabold text-3xl mb-4">
+    <h2 className="font-display font-bold text-3xl mb-4 leading-tight tracking-normal text-gray-900 ">
       {props.children}
     </h2>
   );
@@ -28,7 +28,7 @@ const Heading3 = React.forwardRef(function Heading3(
     <h3
       {...props}
       ref={ref}
-      className="font-display font-semibold text-2xl mb-2 pt-4 tracking-normal"
+      className="font-display font-semibold text-2xl mb-2 pt-4 tracking-normal text-gray-900"
     >
       {children}
     </h3>
@@ -38,7 +38,11 @@ const Heading3 = React.forwardRef(function Heading3(
 export const h3 = Heading3;
 
 function Paragraph(props) {
-  return <p className="font-body font-normal mb-4">{props.children}</p>;
+  return (
+    <p className="font-body font-normal mb-4 leading-relaxed text-gray-800">
+      {props.children}
+    </p>
+  );
 }
 
 export const p = Paragraph;
@@ -105,7 +109,7 @@ function Image(props) {
 export const img = Image;
 
 function Emphasis(props) {
-  return <em className="text-center">{props.children}</em>;
+  return <em className="font-body text-center">{props.children}</em>;
 }
 
 export const em = Emphasis;

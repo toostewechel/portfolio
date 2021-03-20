@@ -60,7 +60,7 @@ function Projects() {
             <div style={projectContent}>
               <img src={Project2} />
               <h4 className="font-display font-bold text-lg text-white">
-                Standardizing <br></br>e-health content
+                Standaardiseren van e-health content
               </h4>
               <p className="font-body text-white opacity-75">
                 Case Study • 15 min
@@ -77,7 +77,7 @@ function Projects() {
           </div>
         </div>
       </a>
-      <a href="/pages/articles/toegankelijke-online-dienstverlening">
+      <a href="../../articles/toegankelijke-online-dienstverlening">
         <div style={project}>
           <div
             style={{
@@ -88,10 +88,10 @@ function Projects() {
             <div style={projectContent}>
               <img src={Project1} />
               <h4 className="font-display font-bold text-lg text-white">
-                Design for Accessibility
+                Ontwerpen voor toegankelijkheid
               </h4>
               <p className="font-body text-white opacity-75">
-                Article • 15 min
+                Artikel • 15 min
               </p>
               <div style={iconBar}>
                 <div style={icon}>

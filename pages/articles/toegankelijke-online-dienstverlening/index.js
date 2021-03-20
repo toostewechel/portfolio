@@ -75,8 +75,8 @@ function Page() {
                 title="Toegankelijke online dienstverlening ontwerpen in de zorg"
                 content="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen, ongeacht beperking. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
                 illustration={ILLUSTRATION_5}
-                backgroundColor="#f9c5d1"
-                backgroundImage="linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%)"
+                backgroundColor="#1F1F47"
+                backgroundImage="#1F1F47"
                 id={slugify(CHAPTERS[0])}
               />
             }

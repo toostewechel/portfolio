@@ -39,7 +39,7 @@ function Icon({ isOpen }) {
       viewBox="0 0 50 50"
       width="40"
       height="40"
-      className="stroke-current text-pink-900"
+      className="stroke-current text-pink-700"
     >
       {isOpen ? (
         <>

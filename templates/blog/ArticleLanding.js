@@ -18,7 +18,7 @@ import {
   ChapterContentContext,
 } from "../../components/Article/Context";
 
-import AvatarTom from "../../images/avatar-tom.png";
+import AvatarTom from "../../assets/avatars/avatar-tom.png";
 
 function ArticleLanding({
   id,
@@ -52,22 +52,25 @@ function ArticleLanding({
           />
         </div>
         <div className="md:row-start-2 md:row-end-6 md:col-start-1 md:col-end-7 md:flex md:flex-col justify-center">
-          <div className="lg:pr-8 text-lg leading-relaxed text-gray-900 tracking-wide">
-            <h1 className="font-display font-extrabold text-2xl lg:text-3xl mb-4 text-gray-900">
+          <div className="lg:pr-8">
+            <h1
+              className="font-display font-bold text-2xl leading-tight
+             lg:text-4xl mb-6 text-white"
+            >
               {props.title}
             </h1>
-            <p className="font-body text-base lg:text-lg mb-4">
+            <p className="font-body leading-relaxed text-base text-gray-400 lg:text-lg mb-6">
               {props.content}
             </p>
           </div>
           <span className="mt-6">
-            <div className="flex flex-row text-gray-900">
+            <div className="flex flex-row text-gray-400">
               <img alt="avatar" className="w-10 h-10 mr-2" src={AvatarTom} />
               <div className="flex-col self-center">
-                <p className="text-body font-semibold text-sm not-italic">
+                <p className="text-body font-semibold text-base not-italic">
                   Tom Oostewechel
                 </p>
-                <div className="items-center flex text-xs">
+                <div className="items-center flex text-sm">
                   <time
                     itemProp="datePublished"
                     dateTime="2011-08-28"
@@ -83,7 +86,7 @@ function ArticleLanding({
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-8 flex justify-center">
         <div
-          className="flex flex-row flex-start w-full p-2 flex justify-center text-gray-900"
+          className="flex flex-row flex-start w-full p-2 justify-center text-gray-900"
           style={{ maxWidth: "1128px" }}
         >
           <div className="h-8 w-8">
