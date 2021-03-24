@@ -107,7 +107,7 @@ function Header() {
       </div>
       {showMenu && (
         <div className="w-full py-4 h-screen block flex-grow bg-background lg:items-center lg:w-auto lg:hidden">
-          <div className="lg:flex-grow lg:flex lg:justify-center ">
+          <div className="lg:flex-grow lg:flex lg:justify-center">
             <div className="mb-2">
               <ActiveLink icon={Home} label="Home" href="/" />
             </div>

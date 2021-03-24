@@ -1,14 +1,18 @@
-import Skill from "./Skill";
+import Link from "./Link";
 
 import AvatarTom from "../../assets/avatars/avatar-tom-real.png";
 import GitHub from "../../assets/icons/github.svg";
 import LinkedIn from "../../assets/icons/linkedin.svg";
-import Vector from "../../assets/icons/vector.svg";
-import Courses from "../../assets/icons/courses.svg";
+import Kernwaarden from "../../assets/icons/discounts.svg";
+import Skills from "../../assets/icons/profile.svg";
+import Education from "../../assets/icons/tutorials.svg";
+import WorkExperience from "../../assets/icons/cube.svg";
+import Software from "../../assets/icons/downloads.svg";
+import Contact from "../../assets/icons/notification.svg";
 
 const wrapper = {
   padding: "20px",
-  background: "rgba(15, 14, 71, 0.5)",
+  backgroundColor: "rgba(15, 14, 71, 0.3)",
   border: "0.5px solid rgba(255, 255, 255, 0.2)",
   boxShadow: "0px 50px 100px rgba(0, 0, 0, 0.25)",
   backdropFilter: "blur(40px)",
@@ -40,11 +44,11 @@ const socialMedia = {
   gap: "12px",
 };
 
-const skills = {
+const links = {
   flexDirection: "column",
-  gap: "20px",
+  gap: "16px",
   marginLeft: "20px",
-  width: "240px",
+  width: "100%",
 };
 
 const color = {
@@ -59,7 +63,7 @@ const subject = {
   alignItems: "center",
 };
 
-function ProfileCard() {
+function ProfileLink() {
   return (
     <div style={wrapper} className="flex flex-row">
       <div style={card}>
@@ -92,23 +96,16 @@ function ProfileCard() {
           </div>
         </div>
       </div>
-      <div style={skills} className="hidden lg:flex">
-        <div style={subject}>
-          <img src={Vector} alt="core skills"></img>
-          <h4 className="font-display font-bold text-white">Skills</h4>
-        </div>
-        <Skill title="Problem Solver" color={color.blue} width="90%" />
-        <Skill title="Analytical" color={color.blue} width="85%" />
-        <Skill title="Product Design" color={color.blue} width="75%" />
-        <div style={subject} className="mt-2">
-          <img src={Courses} alt="Learning"></img>
-          <h4 className="font-display font-bold text-white">Leren</h4>
-        </div>
-        <Skill title="Product Management" color={color.purple} width="50%" />
-        <Skill title="Coding" color={color.purple} width="35%" />
+      <div style={links} className="flex">
+        <Link href="#" id="#" icon={Kernwaarden} label="Kernwaarden" />
+        <Link href="#" id="#" icon={Skills} label="Skills" />
+        <Link href="#" id="#" icon={Education} label="Opleiding" />
+        <Link href="#" id="#" icon={WorkExperience} label="Ervaring" />
+        <Link href="#" id="#" icon={Software} label="Software" />
+        <Link href="#" id="#" icon={Contact} label="Contact" />
       </div>
     </div>
   );
 }
 
-export default ProfileCard;
+export default ProfileLink;

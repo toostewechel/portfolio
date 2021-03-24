@@ -34,6 +34,14 @@
   -moz-text-fill-color: transparent;
 }
 
+.btn {
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .card {
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
