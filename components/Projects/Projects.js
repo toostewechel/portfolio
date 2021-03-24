@@ -6,14 +6,6 @@ import Project3 from "../../assets/projects/design-for-accessibility.svg";
 import JouwOmgeving from "../../assets/logos/jouwomgeving.svg";
 import Article from "../../assets/logos/article.svg";
 
-const projectWrapper = {
-  display: "flex",
-  flexDirection: "row",
-  gap: "32px",
-  flexWrap: "nowrap",
-  overflowX: "auto",
-};
-
 const gradients = {
   purple: "linear-gradient(180deg, #D37EE6 0%, #4926AD 100%)",
   orange: "linear-gradient(180deg, #FFD78A 0%, #F4762D 100%)",
@@ -22,9 +14,22 @@ const gradients = {
 };
 
 function Projects() {
+  const projectWrapper = {
+    display: "grid",
+    gap: "24px",
+    gridTemplateColumns: "repeat(5, minmax(240px, 1fr))",
+    overflowX: "scroll",
+    marginTop: "-20px",
+  };
+
   const project = {
-    width: "240px",
-    flex: "0 0 auto",
+    position: "relative",
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gridTemplateRows: "1fr 1fr",
+    minWidth: "240px",
+    height: "360px",
+    borderRadius: "4px",
   };
 
   const projectContent = {
@@ -48,9 +53,9 @@ function Projects() {
     height: "32px",
   };
   return (
-    <div style={projectWrapper}>
+    <div style={projectWrapper} className="p-0 md:p-4">
       <a href="#" className="hover:scale-110">
-        <div style={project}>
+        <div style={project} className="card card:hover">
           <div
             style={{
               background: gradients.orange,
@@ -78,7 +83,7 @@ function Projects() {
         </div>
       </a>
       <a href="../../articles/toegankelijke-online-dienstverlening">
-        <div style={project}>
+        <div style={project} className="card card:hover">
           <div
             style={{
               background: gradients.purple,

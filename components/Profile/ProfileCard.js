@@ -95,16 +95,14 @@ function ProfileCard() {
       <div style={skills} className="hidden lg:flex">
         <div style={subject}>
           <img src={Vector} alt="core skills"></img>
-          <h4 className="font-display font-bold text-white">
-            Kerncompetenties
-          </h4>
+          <h4 className="font-display font-bold text-white">Skills</h4>
         </div>
         <Skill title="Problem Solver" color={color.blue} width="90%" />
         <Skill title="Analytical" color={color.blue} width="85%" />
         <Skill title="Product Design" color={color.blue} width="75%" />
         <div style={subject} className="mt-2">
           <img src={Courses} alt="Learning"></img>
-          <h4 className="font-display font-bold text-white">Aan het leren</h4>
+          <h4 className="font-display font-bold text-white">Leren</h4>
         </div>
         <Skill title="Product Management" color={color.purple} width="50%" />
         <Skill title="Coding" color={color.purple} width="35%" />

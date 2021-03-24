@@ -18,7 +18,7 @@ export default function Index() {
         <Layout>
           <Header />
           <main>
-            <section className="mt-48 mb-48">
+            <section className="mt-40 mb-40 md:p-4">
               <div className="flex flex-row justify-between">
                 <div className="flex flex-col gap-6 w-full md:w-1/2">
                   <h4 className="font-display font-light text-sm uppercase tracking-widest text-white opacity-75">
@@ -35,11 +35,11 @@ export default function Index() {
                     Ik maak complexe vraagstukken op een creatieve en visuele
                     wijze inzichtelijk en combineer kennis uit verschillende
                     domeinen en vertaal deze naar duurzame en
-                    gebruiksvriendelijke oplossingen.
+                    gebruiksvriendelijke digitale oplossingen.
                   </p>
                   <div>
                     <a
-                      href="#"
+                      href="/about"
                       style={{
                         border: "1px solid #00CFFD",
                       }}
@@ -55,17 +55,19 @@ export default function Index() {
               </div>
             </section>
             <section className="mb-48">
-              <h2 className="font-display font-bold text-3xl leading-tight tracking-normal text-white mb-4">
-                Snapshots
-              </h2>
-              <p
-                style={{ maxWidth: "320px" }}
-                className="font-body text-lg font-normal leading-relaxed text-gray-400  
+              <div className="md:p-4">
+                <h2 className="font-display font-bold text-3xl leading-tight tracking-normal text-white mb-4">
+                  Snapshots
+                </h2>
+                <p
+                  style={{ maxWidth: "320px" }}
+                  className="font-body text-lg font-normal leading-relaxed text-gray-400  
                 mb-12"
-              >
-                Een verzameling van mijn professionele en persoonlijke
-                projecten.
-              </p>
+                >
+                  Een verzameling van mijn professionele en persoonlijke
+                  projecten.
+                </p>
+              </div>
               <div>
                 <Projects />
               </div>

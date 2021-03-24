@@ -5,8 +5,7 @@ import React, { useState, useEffect } from "react";
 //import assets
 import Logo from "../../assets/logos/snapshots-logo.svg";
 import Home from "../../assets/icons/home.svg";
-import Showcase from "../../assets/icons/cube.svg";
-import About from "../../assets/icons/certificates.svg";
+import About from "../../assets/icons/account.svg";
 import Hamburger from "../../assets/icons/hamburger.svg";
 
 function ActiveLink({ label, href, icon }) {
@@ -89,9 +88,9 @@ function Header() {
             id="nav-content"
             className="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
           >
-            <div className="flex-grow flex gap-6 justify-end">
+            <div className="flex-grow flex gap-4 justify-end">
               <ActiveLink icon={Home} label="Home" href="/" />
-              <ActiveLink icon={About} label="Over mij" href="/contact" />
+              <ActiveLink icon={About} label="Over mij" href="/about" />
             </div>
           </div>
         ) : (

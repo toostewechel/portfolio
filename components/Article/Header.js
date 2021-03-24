@@ -36,7 +36,7 @@ function Header({ chapters }) {
     >
       <div className="z-10 flex items-center mr-auto px-2 py-2 lg:px-6 pointer-events-auto">
         <Link href="/">
-          <button className="flex items-center font-body text-pink-700 p-2">
+          <button className="flex items-center font-body text-white p-2 bg-background rounded">
             <svg
               aria-hidden
               className="h-4 w-4 mr-2 fill-current"
