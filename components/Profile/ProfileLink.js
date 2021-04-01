@@ -48,7 +48,7 @@ const links = {
   flexDirection: "column",
   gap: "16px",
   marginLeft: "20px",
-  width: "100%",
+  maxWidth: "240px",
 };
 
 const color = {
